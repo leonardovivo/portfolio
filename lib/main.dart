@@ -11,7 +11,7 @@ class MeuPortifolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu Portfólio',
+      title: 'Portifólio Leonardo Vivo',
       theme: ThemeData.dark().copyWith(
       ),
       home: const PortifolioPage(),
