@@ -1,16 +1,9 @@
-# portifolio_leonardo_vivo
+# Portifólio de Leonardo Vivo Guerreiro
 
-A new Flutter project.
+Este é o meu portifólio como Desenvolvedor, feito com Flutter Web
 
-## Getting Started
+## Você encontrará:
 
-This project is a starting point for a Flutter application.
+Informações sobre mim, minhas habilidades e meus projetos
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Link do portifólio:
