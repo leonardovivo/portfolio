@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SectionIntro extends StatelessWidget {
   @override
@@ -17,8 +18,13 @@ class SectionIntro extends StatelessWidget {
                 fontSize: 100,
                 color: Colors.white,
               ),
-            ),
+            )
+            .animate()
+            .fadeIn(duration: 1.seconds)
+            .slide(begin: Offset(0, 1)),
+
             SizedBox(height: 10),
+
             Text(
               'Desenvolvedor Mobile',
               style: TextStyle(
@@ -27,7 +33,10 @@ class SectionIntro extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
-            ),
+            )
+            .animate()
+            .fadeIn(duration: 1.seconds, delay: 0.5.seconds)
+            .slide(begin: Offset(0, 1)),
           ],
         ),
       ),
