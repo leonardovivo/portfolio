@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class SectionIntro extends StatelessWidget {
+  const SectionIntro({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Leonardo Vivo Guerreiro',
               style: TextStyle(
                 fontFamily: 'Dancing Script',
@@ -21,11 +23,11 @@ class SectionIntro extends StatelessWidget {
             )
             .animate()
             .fadeIn(duration: 1.seconds)
-            .slide(begin: Offset(0, 1)),
+            .slide(begin: const Offset(0, 1)),
 
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
 
-            Text(
+            const Text(
               'Desenvolvedor Mobile',
               style: TextStyle(
                 fontFamily: 'Cormorant Garamond',
@@ -36,7 +38,7 @@ class SectionIntro extends StatelessWidget {
             )
             .animate()
             .fadeIn(duration: 1.seconds, delay: 0.5.seconds)
-            .slide(begin: Offset(0, 1)),
+            .slide(begin: const Offset(0, 1)),
           ],
         ),
       ),
