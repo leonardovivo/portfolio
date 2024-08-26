@@ -6,8 +6,6 @@ class SectionAbout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      // child: Padding(
-      // padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
           Padding(
@@ -26,20 +24,19 @@ class SectionAbout extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
-          Row(
+          const SizedBox(height: 100),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 100),
               Text(
-                'Sou uma pessoa apaixonada por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre.\nAprendo rápido e com facilidade, além de ser proativo, esforçado e criativo. Extremamente focado e determinado em entregar o melhor resultado possível.\nSempre vou até o fim e nunca me arrependo de terminar o que comecei.',
+                'Sou uma pessoa apaixonada por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e\naprender cada vez mais sobre. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\nExtremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos \ndo papel, vou até o fim e nunca me arrependo de terminar o que comecei.',
                 style: TextStyle(
-                //  fontFamily: 'Cormorant Garamond',
+                  //  fontFamily: 'Cormorant Garamond',
                   fontSize: 20,
-                  color: Colors.white,
+                  color: Colors.white
                 ),
               ),
-              const SizedBox(height: 100),
+              SizedBox(height: 100),
             ],
           ),
         ],
