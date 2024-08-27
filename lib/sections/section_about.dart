@@ -24,7 +24,7 @@ class SectionAbout extends StatelessWidget {
                           color: Colors.white.withOpacity(0.1),
                         ),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: '.',
                         style: TextStyle(
                           fontSize: 100,
