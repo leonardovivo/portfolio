@@ -41,20 +41,53 @@ class SectionProjects extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 100),
-          const Padding(
-            padding: EdgeInsets.only(left: 150),
+          Padding(
+            padding: const EdgeInsets.only(left: 150),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AnimatedShaderMask(),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
-                  'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\nda cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.',
+                  'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
+                  'da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.\n'
+                  'Contém a sua tela inicial com o campo de texto que o usuário colocará a\n'
+                  'cidade escolhida, e em seguida a tela que lhe mostra as informações climáticas\n'
+                  'da cidade. Pensando em uma forma agradável de informar um erro ao usuário,\n'
+                  'o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.',
                   style: TextStyle(
                     fontFamily: 'Cormorant Garamond',
                     fontSize: 25,
                     color: Colors.white,
                   ),
+                ),
+                const SizedBox(height: 50),
+                Wrap(
+                  spacing: 20,
+                  runSpacing: 20,
+                  children: [
+                    // Imagem principal
+                    Image.asset(
+                      'assets/images/telaInicial.png',
+                      height: 500,
+                    ),
+                    Image.asset(
+                      'assets/images/campoDeTexto.png',
+                      height: 500,
+                    ),
+                    Image.asset(
+                      'assets/images/telaDeClima.png',
+                      height: 500,
+                    ),
+                    Image.asset(
+                      'assets/images/telaDeClimaEmbaixo.png',
+                      height: 500,
+                    ),
+                    Image.asset(
+                      'assets/images/telaDeErro.png',
+                      height: 500,
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -81,7 +114,7 @@ class _AnimatedShaderMaskState extends State<AnimatedShaderMask>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
     )..repeat(reverse: true);
   }
 
