@@ -21,14 +21,6 @@ class LinkButton extends StatelessWidget {
           throw 'Não foi possível abrir $url';
         }
       },
-      child: Text(
-        text,
-        style: TextStyle(
-          fontFamily: 'Cormorant Garamond',
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
@@ -43,8 +35,16 @@ class LinkButton extends StatelessWidget {
             if (states.contains(WidgetState.hovered)) {
               return Colors.grey;
             }
-            return Color.fromARGB(255, 48, 47, 47);
+            return const Color.fromARGB(255, 48, 47, 47);
           },
+        ),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontFamily: 'Cormorant Garamond',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
