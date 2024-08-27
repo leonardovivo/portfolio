@@ -13,12 +13,26 @@ class SectionAbout extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'SOBRE MIM',
-                  style: TextStyle(
-                    fontSize: 100,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white.withOpacity(0.1),
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'SOBRE MIM',
+                        style: TextStyle(
+                          fontSize: 100,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white.withOpacity(0.1),
+                        ),
+                      ),
+                      TextSpan(
+                        text: '.',
+                        style: TextStyle(
+                          fontSize: 100,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 145, 0, 255),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -31,9 +45,9 @@ class SectionAbout extends StatelessWidget {
               Text(
                 'Sou uma pessoa apaixonada por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e\naprender cada vez mais sobre. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\nExtremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos \ndo papel, vou até o fim e nunca me arrependo de terminar o que comecei.',
                 style: TextStyle(
-                  //  fontFamily: 'Cormorant Garamond',
-                  fontSize: 20,
-                  color: Colors.white
+                  fontFamily: 'Cormorant Garamond',
+                  fontSize: 25,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 100),
