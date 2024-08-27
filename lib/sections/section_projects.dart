@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
 
 class SectionProjects extends StatelessWidget {
   const SectionProjects({super.key});
@@ -61,12 +62,16 @@ class SectionProjects extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
+                const SizedBox(height: 30),
+                LinkButton(
+                  text: 'Repositório no GitHub',
+                  url: Uri.parse('https://github.com/leonardovivo/sky_pulse'),
+                ),
                 const SizedBox(height: 50),
                 Wrap(
                   spacing: 20,
                   runSpacing: 20,
                   children: [
-                    // Imagem principal
                     Image.asset(
                       'assets/images/telaInicial.png',
                       height: 500,
