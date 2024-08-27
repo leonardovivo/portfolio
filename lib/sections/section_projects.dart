@@ -48,7 +48,7 @@ class SectionProjects extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const AnimatedShaderMask(),
+                const AnimatedShaderMask(text: 'Sky Pulse'),
                 const SizedBox(height: 20),
                 const Text(
                   'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
