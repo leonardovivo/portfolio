@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AnimatedShaderMask extends StatefulWidget {
-  const AnimatedShaderMask({super.key});
+  final String text;
+
+  const AnimatedShaderMask({super.key, required this.text});
 
   @override
   _AnimatedShaderMaskState createState() => _AnimatedShaderMaskState();
@@ -46,9 +48,9 @@ class _AnimatedShaderMaskState extends State<AnimatedShaderMask>
               transform: GradientRotation(_controller.value * 2.0 * 3.14),
             ).createShader(bounds);
           },
-          child: const Text(
-            'Sky Pulse',
-            style: TextStyle(
+          child: Text(
+            widget.text,
+            style: const TextStyle(
               fontFamily: 'Cormorant Garamond',
               fontSize: 60,
               fontWeight: FontWeight.bold,
