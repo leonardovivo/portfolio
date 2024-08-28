@@ -38,23 +38,23 @@ class SkyPulseProject extends StatelessWidget {
             runSpacing: 20,
             children: [
               Image.asset(
-                'assets/images/telaInicial.png',
+                'assets/images/telaDeInicio.png',
                 height: 500,
               ),
               Image.asset(
-                'assets/images/campoDeTexto.png',
+                'assets/images/campoTexto.png',
                 height: 500,
               ),
               Image.asset(
-                'assets/images/telaDeClima.png',
+                'assets/images/telaClima.png',
                 height: 500,
               ),
               Image.asset(
-                'assets/images/telaDeClimaEmbaixo.png',
+                'assets/images/telaClimaEmbaixo.png',
                 height: 500,
               ),
               Image.asset(
-                'assets/images/telaDeErro.png',
+                'assets/images/telaErro.png',
                 height: 500,
               ),
             ],
