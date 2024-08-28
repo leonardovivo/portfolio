@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio_leonardo_vivo/projects/bank_screen.dart';
+import 'package:portifolio_leonardo_vivo/projects/login_screen.dart';
 import 'package:portifolio_leonardo_vivo/projects/sky_pulse.dart';
 
 class SectionProjects extends StatelessWidget {
@@ -43,6 +45,10 @@ class SectionProjects extends StatelessWidget {
           ),
           const SizedBox(height: 100),
           const SkyPulseProject(),
+          const SizedBox(height: 100),
+          const LoginScreen(),
+          const SizedBox(height: 100),
+          const BankScreen(),
         ],
       ),
     );
