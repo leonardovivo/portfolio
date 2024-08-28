@@ -67,6 +67,9 @@ flutter:
   - assets/images/telaClimaEmbaixo.png
   - assets/images/telaErro.png
   - assets/images/telaDeBanco.png
+  - assets/images/telaPrincipal.png
+  - assets/images/telaLogin.png
+  - assets/images/telaRegistro.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
