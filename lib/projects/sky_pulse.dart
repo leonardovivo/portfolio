@@ -29,7 +29,7 @@ class SkyPulseProject extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           LinkButton(
-            text: 'Repositório no GitHub',
+            text: 'Ver repositório no GitHub',
             url: Uri.parse('https://github.com/leonardovivo/sky_pulse'),
           ),
           const SizedBox(height: 50),
