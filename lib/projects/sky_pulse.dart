@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
+import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
 
 class SkyPulseProject extends StatelessWidget {
@@ -7,6 +8,14 @@ class SkyPulseProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths = [
+      'assets/images/telaDeInicio.png',
+      'assets/images/campoTexto.png',
+      'assets/images/telaClima.png',
+      'assets/images/telaClimaEmbaixo.png',
+      'assets/images/telaErro.png',
+    ];
+
     return Padding(
       padding: const EdgeInsets.only(left: 150),
       child: Column(
@@ -36,28 +45,25 @@ class SkyPulseProject extends StatelessWidget {
           Wrap(
             spacing: 20,
             runSpacing: 20,
-            children: [
-              Image.asset(
-                'assets/images/telaDeInicio.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/campoTexto.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/telaClima.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/telaClimaEmbaixo.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/telaErro.png',
-                height: 500,
-              ),
-            ],
+            children: List.generate(imagePaths.length, (index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FullScreenImage(
+                        imagePaths: imagePaths,
+                        initialIndex: index, imagePath: '',
+                      ),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  imagePaths[index],
+                  height: 500,
+                ),
+              );
+            }),
           ),
         ],
       ),

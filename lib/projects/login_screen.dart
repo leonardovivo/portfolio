@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
+import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginScreenProject extends StatelessWidget {
+  const LoginScreenProject({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths = [
+      'assets/images/telaPrincipal.png',
+      'assets/images/telaLogin.png',
+      'assets/images/telaRegistro.png',
+    ];
+
     return Padding(
       padding: const EdgeInsets.only(left: 150),
       child: Column(
@@ -37,20 +43,25 @@ class LoginScreen extends StatelessWidget {
           Wrap(
             spacing: 20,
             runSpacing: 20,
-            children: [
-              Image.asset(
-                'assets/images/telaPrincipal.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/telaLogin.png',
-                height: 500,
-              ),
-              Image.asset(
-                'assets/images/telaRegistro.png',
-                height: 500,
-              ),
-            ],
+            children: List.generate(imagePaths.length, (index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FullScreenImage(
+                        imagePaths: imagePaths,
+                        initialIndex: index, imagePath: '',
+                      ),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  imagePaths[index],
+                  height: 500,
+                ),
+              );
+            }),
           ),
         ],
       ),

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
+import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
 
-class BankScreen extends StatelessWidget {
-  const BankScreen({super.key});
+class BankScreenProject extends StatelessWidget {
+  const BankScreenProject({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths = [
+      'assets/images/telaDeBanco.png',
+    ];
+
     return Padding(
       padding: const EdgeInsets.only(left: 150),
       child: Column(
@@ -34,12 +39,25 @@ class BankScreen extends StatelessWidget {
           Wrap(
             spacing: 20,
             runSpacing: 20,
-            children: [
-              Image.asset(
-                'assets/images/telaDeBanco.png',
-                height: 500,
-              ),
-            ],
+            children: List.generate(imagePaths.length, (index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FullScreenImage(
+                        imagePaths: imagePaths,
+                        initialIndex: index, imagePath: '',
+                      ),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  imagePaths[index],
+                  height: 500,
+                ),
+              );
+            }),
           ),
         ],
       ),
