@@ -46,9 +46,9 @@ class SectionProjects extends StatelessWidget {
           const SizedBox(height: 100),
           const SkyPulseProject(),
           const SizedBox(height: 100),
-          const LoginScreen(),
+          const LoginScreenProject(),
           const SizedBox(height: 100),
-          const BankScreen(),
+          const BankScreenProject(),
         ],
       ),
     );
