@@ -24,8 +24,8 @@ class LinkButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
         ),
         elevation: 5,
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 27),
