@@ -20,15 +20,42 @@ class BankScreenProject extends StatelessWidget {
         children: [
           const AnimatedShaderMask(text: 'Banco'),
           const SizedBox(height: 20),
-          const Text(
-            'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
-            'Um cartão com informações, números de renda e gastos,\n'
-            'seção de serviços rápidos (transferência e pausar cartão) e\n'
-            'também informações de transações.',
-            style: TextStyle(
-              fontFamily: 'Cormorant Garamond',
-              fontSize: 25,
-              color: Colors.white,
+          RichText(
+            text: TextSpan(
+              style: const TextStyle(
+                fontFamily: 'Cormorant Garamond',
+                fontSize: 25,
+                color: Colors.white,
+              ),
+              children: [
+                const TextSpan(
+                  text: 'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
+                      'Um cartão com informações, números de renda e gastos,\n'
+                      'seção de serviços rápidos (transferência e pausar cartão) e\n'
+                      'também informações de transações.\n'
+                      '\n',
+                ),
+                const TextSpan(
+                  text: 'Neste aplicativo usei: ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Flutter',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const TextSpan(
+                  text: ' e ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Dart',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const TextSpan(
+                  text: '.',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 30),

@@ -22,18 +22,45 @@ class LoginScreenProject extends StatelessWidget {
         children: [
           const AnimatedShaderMask(text: 'Tela de Login e Registro'),
           const SizedBox(height: 20),
-          const Text(
-            'Telas de Login e Registro de usuário, com campos específicos de:\n'
-            'Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).\n'
-            'Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",\n'
-            'três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)\n'
-            'e dois botões em formato de texto que perguntam se o usuário tem ou não uma conta,\n'
-            'que ao serem clicados, levam ele para a tela de Login ou Registro, dependendo\n'
-            'do botão que for apertado.',
-            style: TextStyle(
-              fontFamily: 'Cormorant Garamond',
-              fontSize: 25,
-              color: Colors.white,
+          RichText(
+            text: TextSpan(
+              style: const TextStyle(
+                fontFamily: 'Cormorant Garamond',
+                fontSize: 25,
+                color: Colors.white,
+              ),
+              children: [
+                const TextSpan(
+                  text: 'Telas de Login e Registro de usuário, com campos específicos de:\n'
+                      'Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).\n'
+                      'Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",\n'
+                      'três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)\n'
+                      'e dois botões em formato de texto que perguntam se o usuário tem ou não uma conta,\n'
+                      'que ao serem clicados, levam ele para a tela de Login ou Registro, dependendo\n'
+                      'do botão que for apertado.\n'
+                      '\n',
+                ),
+                const TextSpan(
+                  text: 'Neste aplicativo usei: ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Flutter',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const TextSpan(
+                  text: ' e ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Dart',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const TextSpan(
+                  text: '.',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 30),

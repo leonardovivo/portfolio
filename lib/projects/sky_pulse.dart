@@ -24,17 +24,60 @@ class SkyPulseProject extends StatelessWidget {
         children: [
           const AnimatedShaderMask(text: 'Sky Pulse'),
           const SizedBox(height: 20),
-          const Text(
-            'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
-            'da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.\n'
-            'Contém a sua tela inicial com o campo de texto que o usuário colocará a\n'
-            'cidade escolhida, e em seguida a tela que lhe mostra as informações climáticas\n'
-            'da cidade. Pensando em uma forma agradável de informar um erro ao usuário,\n'
-            'o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.',
-            style: TextStyle(
-              fontFamily: 'Cormorant Garamond',
-              fontSize: 25,
-              color: Colors.white,
+           RichText(
+            text: const TextSpan(
+              style: TextStyle(
+                fontFamily: 'Cormorant Garamond',
+                fontSize: 25,
+                color: Colors.white,
+              ),
+              children: [
+                TextSpan(
+                  text: 'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
+                      'da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.\n'
+                      'Contém a sua tela inicial com o campo de texto que o usuário colocará a\n'
+                      'cidade escolhida, em seguida a tela que lhe mostra as informações climáticas\n'
+                      'da cidade. Pensando em uma forma agradável de informar um erro ao usuário,\n'
+                      'o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.\n'
+                      '\n',
+                ),
+                TextSpan(
+                  text: 'Neste aplicativo usei: ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Flutter',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: ', ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'Dart',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: ', ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'BLoC',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: ' e ',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+                TextSpan(
+                  text: 'consumi uma API Rest',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextSpan(
+                  text: '.',
+                  style: TextStyle(fontWeight: FontWeight.normal),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 30),
