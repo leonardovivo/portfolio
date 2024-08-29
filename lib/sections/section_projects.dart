@@ -12,7 +12,7 @@ class SectionProjects extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 300),
+          const SizedBox(height: 100),
           Padding(
             padding: const EdgeInsets.only(left: 50),
             child: Row(
@@ -49,6 +49,8 @@ class SectionProjects extends StatelessWidget {
           const LoginScreenProject(),
           const SizedBox(height: 100),
           const BankScreenProject(),
+          const SizedBox(height: 20),
+          const Divider(color: Colors.black),
         ],
       ),
     );
