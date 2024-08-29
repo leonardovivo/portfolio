@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
+import 'package:portifolio_leonardo_vivo/widgets/zoom_image.dart';
 
 class SkyPulseProject extends StatelessWidget {
   const SkyPulseProject({super.key});
@@ -58,8 +59,8 @@ class SkyPulseProject extends StatelessWidget {
                     ),
                   );
                 },
-                child: Image.asset(
-                  imagePaths[index],
+                child: ZoomImage(
+                  imagePath: imagePaths[index],
                   height: 500,
                 ),
               );

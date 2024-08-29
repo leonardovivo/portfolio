@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
+import 'package:portifolio_leonardo_vivo/widgets/zoom_image.dart';
+
 class LoginScreenProject extends StatelessWidget {
   const LoginScreenProject({super.key});
 
@@ -51,13 +53,14 @@ class LoginScreenProject extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) => FullScreenImage(
                         imagePaths: imagePaths,
-                        initialIndex: index, imagePath: '',
+                        initialIndex: index,
+                        imagePath: '',
                       ),
                     ),
                   );
                 },
-                child: Image.asset(
-                  imagePaths[index],
+                child: ZoomImage(
+                  imagePath: imagePaths[index],
                   height: 500,
                 ),
               );
