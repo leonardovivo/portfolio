@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_skills.dart';
+import 'package:portifolio_leonardo_vivo/widgets/cards_certificates.dart';
 
 class SectionEducation extends StatelessWidget {
   const SectionEducation({super.key});
@@ -41,7 +41,47 @@ class SectionEducation extends StatelessWidget {
               ],
             ),
           ),
-          const SectionSkills(),
+          const SizedBox(height: 100),
+          const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 70),
+                child: Wrap(
+                  spacing: 80,
+                  runSpacing: 20,
+                  children: [
+                    CardsCertificates(
+                      typeCertificate: 'Tecnólogo',
+                      certificateName: 'Análise e Desenvolvimento de Sistemas',
+                      institution: 'FATEC Ipiranga - Pastor Enéas Tognini',
+                      period: '2023 - 2025',
+                      height: 200,
+                      width: 535,
+                    ),
+                    CardsCertificates(
+                      typeCertificate: 'Formação Flutter',
+                      certificateName:
+                          'Desenvolva seu primeiro app com Flutter',
+                      institution: 'Alura',
+                      period: '96h - 2023',
+                      height: 200,
+                      width: 535,
+                    ),
+                    CardsCertificates(
+                      typeCertificate: 'Formação Dart',
+                      certificateName:
+                          'Crie projetos em Dart, a linguagem utilizada no Flutter',
+                      institution: 'Alura',
+                      period: '55h - 2023',
+                      height: 200,
+                      width: 535,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
