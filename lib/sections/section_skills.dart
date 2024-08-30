@@ -13,7 +13,7 @@ class SectionSkills extends StatelessWidget {
         children: [
           const SizedBox(height: 100),
           Padding(
-            padding: const EdgeInsets.only(left: 150),
+            padding: const EdgeInsets.only(left: 75),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -32,7 +32,7 @@ class SectionSkills extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 150),
+            padding: EdgeInsets.only(left: 75),
             child: Wrap(
               spacing: 50,
               runSpacing: 20,
@@ -73,7 +73,7 @@ class SectionSkills extends StatelessWidget {
           ),
           const SizedBox(height: 100),
           Padding(
-            padding: const EdgeInsets.only(left: 150),
+            padding: const EdgeInsets.only(left: 75),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -92,7 +92,7 @@ class SectionSkills extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 150),
+            padding: EdgeInsets.only(left: 75),
             child: Wrap(
               spacing: 50,
               runSpacing: 20,
