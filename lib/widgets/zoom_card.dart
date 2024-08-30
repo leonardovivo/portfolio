@@ -30,51 +30,52 @@ class _ZoomableEducationItemState extends State<ZoomEducationItem> {
       onExit: (_) => setState(() => _isHovered = false),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        transform: _isHovered
-            ? Matrix4.identity().scaled(1.1)
-            : Matrix4.identity(),
         curve: Curves.easeInOut,
-        child: Container(
-          height: widget.height,
-          width: widget.width,
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
-            boxShadow: [
-              BoxShadow(
-                color: _isHovered
-                    ? const Color.fromARGB(255, 145, 0, 255)
-                    : Colors.black,
-                blurRadius: _isHovered ? 12 : 8,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(widget.icon, size: 40, color: Colors.white),
-              const SizedBox(height: 10),
-              Text(
-                widget.skillName,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+        child: Transform.scale(
+          scale: _isHovered ? 1.1 : 1.0,
+          alignment: Alignment.center,
+          child: Container(
+            height: widget.height,
+            width: widget.width,
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+              boxShadow: [
+                BoxShadow(
+                  color: _isHovered
+                      ? const Color.fromARGB(255, 145, 0, 255)
+                      : Colors.black,
+                  blurRadius: _isHovered ? 12 : 8,
+                  offset: const Offset(0, 4),
                 ),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                widget.description,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: Colors.white70,
+              ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(widget.icon, size: 40, color: Colors.white),
+                const SizedBox(height: 10),
+                Text(
+                  widget.skillName,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-                textAlign: TextAlign.center,
-              ),
-            ],
+                const SizedBox(height: 5),
+                Text(
+                  widget.description,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.white70,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ),
       ),
