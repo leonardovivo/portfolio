@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/widgets/bullet_point.dart';
-import 'package:portifolio_leonardo_vivo/widgets/education_item.dart';
+import 'package:portifolio_leonardo_vivo/widgets/zoom_card.dart';
 
 class SectionSkills extends StatelessWidget {
   const SectionSkills({super.key});
@@ -34,31 +34,34 @@ class SectionSkills extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 150),
             child: Wrap(
-              spacing: 20,
+              spacing: 50,
               runSpacing: 20,
               children: [
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.code,
                   skillName: 'Flutter',
-                  description: 'Desenvolvimento de aplicações para dispositivos móveis',
+                  description:
+                      'Desenvolvimento de aplicações para dispositivos móveis',
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.language,
                   skillName: 'Dart',
-                  description: 'Prática com a linguagem de programação do Flutter',
+                  description:
+                      'Prática com a linguagem de programação do Flutter',
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.build,
                   skillName: 'BLoC',
-                  description: 'Gerenciamento de estado utilizando BLoC no Flutter',
+                  description:
+                      'Gerenciamento de estado utilizando BLoC no Flutter',
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.api,
                   skillName: 'API Rest',
                   description: 'Integração e consumo de APIs Rest',
@@ -91,24 +94,24 @@ class SectionSkills extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 150),
             child: Wrap(
-              spacing: 20,
+              spacing: 50,
               runSpacing: 20,
               children: [
-                   EducationItem(
+                ZoomEducationItem(
                   icon: Icons.school,
                   skillName: 'Aprendizagem Rápida',
                   description: 'Rapidez e facilidade no aprendizado',
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.message,
                   skillName: 'Comunicação',
                   description: 'Habilidade em transmitir ideias e feedbacks.',
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.group,
                   skillName: 'Trabalho em equipe',
                   description:
@@ -116,7 +119,7 @@ class SectionSkills extends StatelessWidget {
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.accessibility,
                   skillName: 'Adaptabilidade',
                   description:
@@ -124,7 +127,7 @@ class SectionSkills extends StatelessWidget {
                   height: 200,
                   width: 250,
                 ),
-                EducationItem(
+                ZoomEducationItem(
                   icon: Icons.lightbulb,
                   skillName: 'Criatividade',
                   description: 'Capacidade de encontrar soluções inovadoras',
