@@ -23,14 +23,14 @@ class LoginScreenProject extends StatelessWidget {
           const AnimatedShaderMask(text: 'Tela de Login e Registro'),
           const SizedBox(height: 20),
           RichText(
-            text: TextSpan(
-              style: const TextStyle(
+            text: const TextSpan(
+              style: TextStyle(
                 fontFamily: 'Cormorant Garamond',
                 fontSize: 25,
                 color: Colors.white,
               ),
               children: [
-                const TextSpan(
+                TextSpan(
                   text: 'Telas de Login e Registro de usuário, com campos específicos de:\n'
                       'Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).\n'
                       'Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",\n'
@@ -40,7 +40,7 @@ class LoginScreenProject extends StatelessWidget {
                       'do botão que for apertado.\n'
                       '\n',
                 ),
-                const TextSpan(
+                TextSpan(
                   text: 'Neste aplicativo usei: ',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),
@@ -48,7 +48,7 @@ class LoginScreenProject extends StatelessWidget {
                   text: 'Flutter',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: ' e ',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),
@@ -56,7 +56,7 @@ class LoginScreenProject extends StatelessWidget {
                   text: 'Dart',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: '.',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),

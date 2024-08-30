@@ -21,21 +21,21 @@ class BankScreenProject extends StatelessWidget {
           const AnimatedShaderMask(text: 'Banco'),
           const SizedBox(height: 20),
           RichText(
-            text: TextSpan(
-              style: const TextStyle(
+            text: const TextSpan(
+              style: TextStyle(
                 fontFamily: 'Cormorant Garamond',
                 fontSize: 25,
                 color: Colors.white,
               ),
               children: [
-                const TextSpan(
+                TextSpan(
                   text: 'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
                       'Um cartão com informações, números de renda e gastos,\n'
                       'seção de serviços rápidos (transferência e pausar cartão) e\n'
                       'também informações de transações.\n'
                       '\n',
                 ),
-                const TextSpan(
+                TextSpan(
                   text: 'Neste aplicativo usei: ',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),
@@ -43,7 +43,7 @@ class BankScreenProject extends StatelessWidget {
                   text: 'Flutter',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: ' e ',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),
@@ -51,7 +51,7 @@ class BankScreenProject extends StatelessWidget {
                   text: 'Dart',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: '.',
                   style: TextStyle(fontWeight: FontWeight.normal),
                 ),
