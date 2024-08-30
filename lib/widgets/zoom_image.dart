@@ -4,8 +4,7 @@ class ZoomImage extends StatefulWidget {
   final String imagePath;
   final double height;
 
-  const ZoomImage({required this.imagePath, required this.height, Key? key})
-      : super(key: key);
+  const ZoomImage({required this.imagePath, required this.height, super.key});
 
   @override
   _ZoomImageState createState() => _ZoomImageState();
