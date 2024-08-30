@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio_leonardo_vivo/sections/section_about.dart';
+import 'package:portifolio_leonardo_vivo/sections/section_contact.dart';
 import 'package:portifolio_leonardo_vivo/sections/section_education.dart';
 import 'package:portifolio_leonardo_vivo/sections/section_intro.dart';
 import 'package:portifolio_leonardo_vivo/sections/section_projects.dart';
@@ -19,7 +20,7 @@ class PortifolioPage extends StatelessWidget {
             SectionProjects(),
             SectionEducation(),
             SectionSkills(),
-            // SectionContact(),
+            SectionContact(),
           ],
         ),
       ),
