@@ -5,10 +5,10 @@ class BulletPoint extends StatelessWidget {
   final double size;
 
   const BulletPoint({
-    Key? key,
+    super.key,
     this.color = const Color.fromARGB(255, 145, 0, 255),
     this.size = 10.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
