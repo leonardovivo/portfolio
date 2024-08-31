@@ -15,8 +15,8 @@ class CardsCertificates extends StatefulWidget {
     required this.period,
     required this.height,
     required this.width,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _CardsCertificatesState createState() => _CardsCertificatesState();

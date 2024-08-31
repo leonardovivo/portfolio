@@ -13,8 +13,8 @@ class ZoomEducationItem extends StatefulWidget {
     required this.description,
     required this.height,
     required this.width,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _ZoomableEducationItemState createState() => _ZoomableEducationItemState();
