@@ -31,7 +31,8 @@ class LoginScreenProject extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: 'Telas de Login e Registro de usuário, com campos específicos de:\n'
+                  text:
+                      'Telas de Login e Registro de usuário, com campos específicos de:\n'
                       'Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).\n'
                       'Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",\n'
                       'três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)\n'
@@ -81,7 +82,6 @@ class LoginScreenProject extends StatelessWidget {
                       builder: (context) => FullScreenImage(
                         imagePaths: imagePaths,
                         initialIndex: index,
-                        imagePath: '',
                       ),
                     ),
                   );

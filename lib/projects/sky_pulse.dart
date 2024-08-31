@@ -24,7 +24,7 @@ class SkyPulseProject extends StatelessWidget {
         children: [
           const AnimatedShaderMask(text: 'Sky Pulse'),
           const SizedBox(height: 20),
-           RichText(
+          RichText(
             text: const TextSpan(
               style: TextStyle(
                 fontFamily: 'Cormorant Garamond',
@@ -33,7 +33,8 @@ class SkyPulseProject extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: 'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
+                  text:
+                      'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas\n'
                       'da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.\n'
                       'Contém a sua tela inicial com o campo de texto que o usuário colocará a\n'
                       'cidade escolhida, em seguida a tela que lhe mostra as informações climáticas\n'
@@ -97,7 +98,7 @@ class SkyPulseProject extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) => FullScreenImage(
                         imagePaths: imagePaths,
-                        initialIndex: index, imagePath: '',
+                        initialIndex: index,
                       ),
                     ),
                   );

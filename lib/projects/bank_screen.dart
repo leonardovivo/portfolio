@@ -29,7 +29,8 @@ class BankScreenProject extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: 'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
+                  text:
+                      'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
                       'Um cartão com informações, números de renda e gastos,\n'
                       'seção de serviços rápidos (transferência e pausar cartão) e\n'
                       'também informações de transações.\n'
@@ -76,7 +77,6 @@ class BankScreenProject extends StatelessWidget {
                       builder: (context) => FullScreenImage(
                         imagePaths: imagePaths,
                         initialIndex: index,
-                        imagePath: '',
                       ),
                     ),
                   );
