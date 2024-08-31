@@ -14,7 +14,7 @@ class MeuPortifolio extends StatelessWidget {
       title: 'Portifólio Leonardo Vivo',
       theme: ThemeData.dark().copyWith(
       ),
-      home: const PortifolioPage(),
+      home: PortifolioPage(),
     );
   }
 }
