@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio_leonardo_vivo/widgets/link_text_button.dart';
 
 class SectionContact extends StatelessWidget {
   const SectionContact({super.key});
@@ -39,42 +40,35 @@ class SectionContact extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Row(
+                            Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.mail,
                                   color: Colors.white,
                                   size: 25,
                                 ),
-                                SizedBox(width: 10),
-                                Text(
-                                  'leonardovivo3@gmail.com',
-                                  style: TextStyle(
-                                    fontFamily: "Cormorant Garamond",
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                const SizedBox(width: 10),
+                                LinkTextButton(
+                                  text: 'leonardovivo3@gmail.com',
+                                  url: Uri(
+                                      scheme: 'mailto',
+                                      path: 'leonardovivo3@gmail.com'),
                                 ),
                               ],
                             ),
                             const SizedBox(height: 15),
-                            const Row(
+                            Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.phone,
                                   color: Colors.white,
                                   size: 25,
                                 ),
-                                SizedBox(width: 10),
-                                Text(
-                                  '+55 11 94385-8097',
-                                  style: TextStyle(
-                                    fontFamily: "Cormorant Garamond",
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                const SizedBox(width: 10),
+                                LinkTextButton(
+                                  text: '+55 11 94385-8097',
+                                  url: Uri(
+                                      scheme: 'tel', path: '+5511943858097'),
                                 ),
                               ],
                             ),
@@ -88,14 +82,10 @@ class SectionContact extends StatelessWidget {
                                   color: Colors.white,
                                 ),
                                 const SizedBox(width: 10),
-                                const Text(
-                                  'GitHub',
-                                  style: TextStyle(
-                                    fontFamily: "Cormorant Garamond",
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                LinkTextButton(
+                                  text: 'GitHub',
+                                  url: Uri.parse(
+                                      'https://github.com/leonardovivo'),
                                 ),
                               ],
                             ),
@@ -108,14 +98,10 @@ class SectionContact extends StatelessWidget {
                                   height: 30,
                                 ),
                                 const SizedBox(width: 10),
-                                const Text(
-                                  'LinkedIn',
-                                  style: TextStyle(
-                                    fontFamily: "Cormorant Garamond",
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                LinkTextButton(
+                                  text: 'LinkedIn',
+                                  url: Uri.parse(
+                                      'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
                                 ),
                               ],
                             ),
