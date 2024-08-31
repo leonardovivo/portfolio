@@ -21,9 +21,22 @@ class _ZoomImageState extends State<ZoomImage> {
       child: AnimatedScale(
         scale: _isHovered ? 1.1 : 1.0,
         duration: const Duration(milliseconds: 200),
-        child: Image.asset(
-          widget.imagePath,
-          height: widget.height,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(
+              color: Colors.grey.shade800,
+              width: 8,
+            ),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(22),
+            child: Image.asset(
+              widget.imagePath,
+              height: widget.height,
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
       ),
     );
