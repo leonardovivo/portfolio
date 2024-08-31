@@ -11,7 +11,7 @@ class SectionSkills extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 100),
+          const SizedBox(height: 250),
           Padding(
             padding: const EdgeInsets.only(left: 75),
             child: Row(

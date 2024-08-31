@@ -10,7 +10,7 @@ class SectionEducation extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 100),
+          const SizedBox(height: 400),
           Padding(
             padding: const EdgeInsets.only(left: 50),
             child: Row(

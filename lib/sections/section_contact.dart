@@ -8,7 +8,7 @@ class SectionContact extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const SizedBox(height: 270),
+          const SizedBox(height: 390),
           Container(
             width: double.infinity,
             height: 500,
