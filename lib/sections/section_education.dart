@@ -46,7 +46,7 @@ class SectionEducation extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 70),
+                padding: EdgeInsets.only(left: 70),
                 child: Wrap(
                   spacing: 80,
                   runSpacing: 20,

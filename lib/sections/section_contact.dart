@@ -128,7 +128,7 @@ class SectionContact extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Padding(
-                    padding: EdgeInsets.only(bottom: 20),
+                    padding: const EdgeInsets.only(bottom: 20),
                     child: Text(
                       '2024 - Code by Leonardo Vivo',
                       style: TextStyle(
