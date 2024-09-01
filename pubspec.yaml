@@ -33,6 +33,7 @@ dependencies:
   flutter_animate: ^4.0.3
   url_launcher: ^6.3.0
   scrollable_positioned_list: ^0.3.5
+  flutter_svg: ^2.0.10+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -73,6 +74,9 @@ flutter:
   - assets/images/telaRegistro.png
   - assets/icons/linkedin.png
   - assets/icons/github.png
+  - assets/icons/linkedin.svg
+  - assets/icons/github.svg
+  - assets/icons/email.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
