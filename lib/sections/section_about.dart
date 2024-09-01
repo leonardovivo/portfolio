@@ -56,7 +56,7 @@ class SectionAbout extends StatelessWidget {
               SizedBox(height: 100),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 100),
           const Divider(color: Colors.black),
         ],
       ),
