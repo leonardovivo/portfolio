@@ -26,7 +26,8 @@ class SectionContact extends StatelessWidget {
                           padding: EdgeInsets.only(left: 600),
                           child: Text(
                             'Eu estou disponível para novas\n'
-                            'oportunidades. Entre em contato',
+                            'oportunidades. Entre em contato\n'
+                            'clicando em algum desses links',
                             style: TextStyle(
                               fontFamily: "Cormorant Garamond",
                               fontSize: 23,
@@ -56,7 +57,7 @@ class SectionContact extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 15),
+                            const SizedBox(height: 20),
                             Row(
                               children: [
                                 const Icon(
@@ -72,7 +73,7 @@ class SectionContact extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 15),
+                            const SizedBox(height: 20),
                             Row(
                               children: [
                                 Image.asset(
@@ -89,7 +90,7 @@ class SectionContact extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 15),
+                            const SizedBox(height: 20),
                             Row(
                               children: [
                                 Image.asset(
@@ -116,7 +117,7 @@ class SectionContact extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: Text(
-                      '2024 - Code by Leonardo Vivo',
+                      '2024 - Code by Leonardo Vivo Guerreiro',
                       style: TextStyle(
                         fontFamily: "Cormorant Garamond",
                         fontSize: 18,
