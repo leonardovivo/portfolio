@@ -12,7 +12,7 @@ class SectionProjects extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 400),
+          const SizedBox(height: 500),
           Padding(
             padding: const EdgeInsets.only(left: 50),
             child: Row(
