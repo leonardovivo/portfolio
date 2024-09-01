@@ -43,7 +43,10 @@ class SectionAbout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Sou uma pessoa apaixonada por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e\naprender cada vez mais sobre. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\nExtremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos \ndo papel, vou até o fim e nunca me arrependo de terminar o que comecei.',
+                'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
+                'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
+                'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim\n'
+                'e nunca me arrependo de terminar o que comecei.',
                 style: TextStyle(
                   fontFamily: 'Cormorant Garamond',
                   fontSize: 25,
