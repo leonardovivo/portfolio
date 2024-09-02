@@ -18,107 +18,182 @@ class _PortifolioPageState extends State<PortifolioPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 0,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Voltar ao Início',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isMobile = constraints.maxWidth < 600;
+
+        return Scaffold(
+          appBar: AppBar(
+            actions: !isMobile
+                ? [
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 0,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Voltar ao Início',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 1,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Sobre Mim',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 2,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Projetos',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 3,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Formação',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 4,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Habilidades',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => itemScrollController.scrollTo(
+                        index: 5,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      ),
+                      child: const Text(
+                        'Contato',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(width: 70),
+                  ]
+                : null,
           ),
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 1,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Sobre Mim',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
+          drawer: isMobile
+              ? Drawer(
+                  child: ListView(
+                    children: [
+                      DrawerHeader(
+                        child: const Text(
+                          'Navegação rápida',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Voltar ao Início'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 0,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Sobre Mim'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 1,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Projetos'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 2,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Formação'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 3,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Habilidades'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 4,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                      ListTile(
+                        title: const Text('Contato'),
+                        onTap: () => itemScrollController.scrollTo(
+                          index: 5,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : null,
+          body: ScrollablePositionedList.builder(
+            itemCount: 6,
+            itemBuilder: (context, index) {
+              switch (index) {
+                case 0:
+                  return SectionIntro(
+                      itemScrollController: itemScrollController);
+                case 1:
+                  return const SectionAbout();
+                case 2:
+                  return const SectionProjects();
+                case 3:
+                  return const SectionEducation();
+                case 4:
+                  return const SectionSkills();
+                case 5:
+                  return const SectionContact();
+                default:
+                  return SectionIntro(
+                      itemScrollController: itemScrollController);
+              }
+            },
+            itemScrollController: itemScrollController,
+            itemPositionsListener: itemPositionsListener,
           ),
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 2,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Projetos',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 3,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Formação',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 4,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Habilidades',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          TextButton(
-            onPressed: () => itemScrollController.scrollTo(
-              index: 5,
-              duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-            ),
-            child: const Text(
-              'Contato',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const SizedBox(width: 70),
-        ],
-      ),
-      body: ScrollablePositionedList.builder(
-        itemCount: 6,
-        itemBuilder: (context, index) {
-          switch (index) {
-            case 0:
-              return SectionIntro(itemScrollController: itemScrollController);
-            case 1:
-              return const SectionAbout();
-            case 2:
-              return const SectionProjects();
-            case 3:
-              return const SectionEducation();
-            case 4:
-              return const SectionSkills();
-            case 5:
-              return const SectionContact();
-            default:
-              return SectionIntro(itemScrollController: itemScrollController);
-          }
-        },
-        itemScrollController: itemScrollController,
-        itemPositionsListener: itemPositionsListener,
-      ),
+        );
+      },
     );
   }
 }

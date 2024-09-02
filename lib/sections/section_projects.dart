@@ -9,49 +9,58 @@ class SectionProjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 500),
-          Padding(
-            padding: const EdgeInsets.only(left: 50),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                  text: TextSpan(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 400),
+            LayoutBuilder(
+              builder: (context, constraints) {
+                final isMobile = constraints.maxWidth < 600;
+
+                return Padding(
+                  padding: EdgeInsets.only(left: isMobile ? 10 : 30),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextSpan(
-                        text: 'PROJETOS',
-                        style: TextStyle(
-                          fontSize: 100,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white.withOpacity(0.1),
-                        ),
-                      ),
-                      const TextSpan(
-                        text: '.',
-                        style: TextStyle(
-                          fontSize: 100,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 145, 0, 255),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'PROJETOS',
+                              style: TextStyle(
+                                fontSize: isMobile ? 60 : 100,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.1),
+                              ),
+                            ),
+                            TextSpan(
+                              text: '.',
+                              style: TextStyle(
+                                fontSize: isMobile ? 60 : 100,
+                                fontWeight: FontWeight.bold,
+                                color: const Color.fromARGB(255, 145, 0, 255),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                ),
-              ],
+                );
+              },
             ),
-          ),
-          const SizedBox(height: 100),
-          const SkyPulseProject(),
-          const SizedBox(height: 100),
-          const LoginScreenProject(),
-          const SizedBox(height: 100),
-          const BankScreenProject(),
-          const SizedBox(height: 20),
-          const Divider(color: Colors.black),
-        ],
+            const SizedBox(height: 100),
+            const SkyPulseProject(),
+            const SizedBox(height: 100),
+            const LoginScreenProject(),
+            const SizedBox(height: 100),
+            const BankScreenProject(),
+            const SizedBox(height: 20),
+            const Divider(color: Colors.black),
+          ],
+        ),
       ),
     );
   }

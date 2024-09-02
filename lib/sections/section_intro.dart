@@ -10,6 +10,9 @@ class SectionIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = screenWidth < 600 ? 50 : 100;
+
     return Stack(
       children: [
         SizedBox(
@@ -19,11 +22,11 @@ class SectionIntro extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Leonardo Vivo Guerreiro',
                   style: TextStyle(
                     fontFamily: 'Dancing Script',
-                    fontSize: 100,
+                    fontSize: fontSize,
                     color: Colors.white,
                   ),
                 )
@@ -31,11 +34,11 @@ class SectionIntro extends StatelessWidget {
                     .fadeIn(duration: 1.seconds)
                     .slide(begin: const Offset(0, 1)),
                 const SizedBox(height: 10),
-                const Text(
+                Text(
                   'Desenvolvedor Mobile',
                   style: TextStyle(
                     fontFamily: 'Cormorant Garamond',
-                    fontSize: 40,
+                    fontSize: fontSize / 2.5,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
