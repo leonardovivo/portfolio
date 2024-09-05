@@ -5,85 +5,100 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class SectionIntro extends StatelessWidget {
   final ItemScrollController itemScrollController;
-
   const SectionIntro({super.key, required this.itemScrollController});
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double fontSize = screenWidth < 600 ? 50 : 100;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        double fontSizeTitle = constraints.maxWidth > 800 ? 100 : 50;
+        double fontSizeSubtitle = constraints.maxWidth > 800 ? 40 : 24;
+        double spacing = constraints.maxWidth > 800 ? 80 : 40;
+        double horizontalPadding = constraints.maxWidth > 800
+            ? 100
+            : 20; // Adicionando padding horizontal
 
-    return Stack(
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'Leonardo Vivo Guerreiro',
-                  style: TextStyle(
-                    fontFamily: 'Dancing Script',
-                    fontSize: fontSize,
-                    color: Colors.white,
+        return Stack(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal:
+                          horizontalPadding), // Aplicando padding horizontal
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      FittedBox(
+                        child: Text(
+                          'Leonardo Vivo Guerreiro',
+                          style: TextStyle(
+                            fontFamily: 'Dancing Script',
+                            fontSize: fontSizeTitle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                          .animate()
+                          .fadeIn(duration: 1.seconds)
+                          .slide(begin: const Offset(0, 1)),
+                      const SizedBox(height: 10),
+                      Text(
+                        'Desenvolvedor Mobile',
+                        style: TextStyle(
+                          fontFamily: 'Cormorant Garamond',
+                          fontSize: fontSizeSubtitle,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                          .animate()
+                          .fadeIn(duration: 1.seconds, delay: 0.5.seconds)
+                          .slide(begin: const Offset(0, 1)),
+                      SizedBox(height: spacing),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgButton(
+                            assetPath: 'assets/icons/linkedin.svg',
+                            url: Uri.parse(
+                                'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
+                            hoverColor: Colors.blue,
+                          )
+                              .animate()
+                              .fadeIn(duration: 1.seconds)
+                              .slide(begin: const Offset(0, 1)),
+                          const SizedBox(width: 25),
+                          SvgButton(
+                            assetPath: 'assets/icons/github.svg',
+                            url: Uri.parse('https://github.com/leonardovivo'),
+                            hoverColor:
+                                const Color.fromARGB(255, 190, 184, 184),
+                          )
+                              .animate()
+                              .fadeIn(duration: 1.seconds)
+                              .slide(begin: const Offset(0, 1)),
+                          const SizedBox(width: 25),
+                          SvgButton(
+                            assetPath: 'assets/icons/email.svg',
+                            url: Uri.parse('mailto:leonardovivo3@gmail.com'),
+                            hoverColor: Colors.red,
+                          )
+                              .animate()
+                              .fadeIn(duration: 1.seconds)
+                              .slide(begin: const Offset(0, 1)),
+                        ],
+                      ),
+                    ],
                   ),
-                )
-                    .animate()
-                    .fadeIn(duration: 1.seconds)
-                    .slide(begin: const Offset(0, 1)),
-                const SizedBox(height: 10),
-                Text(
-                  'Desenvolvedor Mobile',
-                  style: TextStyle(
-                    fontFamily: 'Cormorant Garamond',
-                    fontSize: fontSize / 2.5,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-                    .animate()
-                    .fadeIn(duration: 1.seconds, delay: 0.5.seconds)
-                    .slide(begin: const Offset(0, 1)),
-                const SizedBox(height: 80),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgButton(
-                      assetPath: 'assets/icons/linkedin.svg',
-                      url: Uri.parse(
-                          'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
-                      hoverColor: Colors.blue,
-                    )
-                        .animate()
-                        .fadeIn(duration: 1.seconds)
-                        .slide(begin: const Offset(0, 1)),
-                    const SizedBox(width: 25),
-                    SvgButton(
-                      assetPath: 'assets/icons/github.svg',
-                      url: Uri.parse('https://github.com/leonardovivo'),
-                      hoverColor: const Color.fromARGB(255, 190, 184, 184),
-                    )
-                        .animate()
-                        .fadeIn(duration: 1.seconds)
-                        .slide(begin: const Offset(0, 1)),
-                    const SizedBox(width: 25),
-                    SvgButton(
-                      assetPath: 'assets/icons/email.svg',
-                      url: Uri.parse('mailto:leonardovivo3@gmail.com'),
-                      hoverColor: Colors.red,
-                    )
-                        .animate()
-                        .fadeIn(duration: 1.seconds)
-                        .slide(begin: const Offset(0, 1)),
-                  ],
                 ),
-              ],
+              ),
             ),
-          ),
-        ),
-      ],
+          ],
+        );
+      },
     );
   }
 }
