@@ -8,6 +8,8 @@ import 'package:portifolio_leonardo_vivo/sections/section_skills.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class PortifolioPage extends StatefulWidget {
+  const PortifolioPage({super.key});
+
   @override
   _PortifolioPageState createState() => _PortifolioPageState();
 }
@@ -107,12 +109,12 @@ class _PortifolioPageState extends State<PortifolioPage> {
                   child: ListView(
                     children: [
                       DrawerHeader(
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                        ),
                         child: const Text(
                           'Navegação rápida',
                           style: TextStyle(color: Colors.white),
-                        ),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       ListTile(
