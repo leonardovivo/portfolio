@@ -8,6 +8,8 @@ class SectionAbout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         bool isMobile = constraints.maxWidth < 600;
+        bool isTablet =
+            constraints.maxWidth >= 600 && constraints.maxWidth < 1024;
 
         double fontSizeTitle = isMobile ? 60 : 100;
         double fontSizeText = isMobile ? 16 : 25;
@@ -38,7 +40,7 @@ class SectionAbout extends StatelessWidget {
                             style: TextStyle(
                               fontSize: isMobile ? fontSizeTitle : 100,
                               fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 145, 0, 255),
+                              color: const Color.fromARGB(255, 145, 0, 255),
                             ),
                           ),
                         ],
@@ -55,10 +57,15 @@ class SectionAbout extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
-                        'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
-                        'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim\n'
-                        'e nunca me arrependo de terminar o que comecei.',
+                        isTablet
+                            ? 'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
+                                'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
+                                'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'
+                                ' e nunca me arrependo de terminar o que comecei.'
+                            : 'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
+                                'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
+                                'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim\n'
+                                'e nunca me arrependo de terminar o que comecei.',
                         style: TextStyle(
                           fontFamily: 'Cormorant Garamond',
                           fontSize: fontSizeText,
