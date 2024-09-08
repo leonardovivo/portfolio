@@ -14,9 +14,7 @@ class SectionIntro extends StatelessWidget {
         double fontSizeTitle = constraints.maxWidth > 800 ? 100 : 50;
         double fontSizeSubtitle = constraints.maxWidth > 800 ? 40 : 24;
         double spacing = constraints.maxWidth > 800 ? 80 : 40;
-        double horizontalPadding = constraints.maxWidth > 800
-            ? 100
-            : 20; // Adicionando padding horizontal
+        double horizontalPadding = constraints.maxWidth > 800 ? 100 : 20;
 
         return Stack(
           children: [
@@ -24,9 +22,7 @@ class SectionIntro extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               child: Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal:
-                          horizontalPadding), // Aplicando padding horizontal
+                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
