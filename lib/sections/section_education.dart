@@ -13,12 +13,14 @@ class SectionEducation extends StatelessWidget {
 
           final bool isMobile = screenWidth < 600;
           final bool isTablet = screenWidth >= 600 && screenWidth <= 1024;
+          final bool isMediumScreen = screenWidth > 1024 && screenWidth <= 1300;
 
           final double paddingHorizontal = isMobile ? 10 : 70;
           final double fontSizeTitle = isMobile ? 60 : 100;
-          final double cardWidth = isMobile ? double.infinity : 535;
-          final double cardHeight = isMobile ? 250 : 200;
-          final double spacingBetweenCards = isMobile ? 10 : 80;
+          final double cardWidth =
+              isMobile || isTablet || isMediumScreen ? double.infinity : 535;
+          final double cardHeight =
+              isMobile || isTablet || isMediumScreen ? 250 : 200;
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,10 +61,8 @@ class SectionEducation extends StatelessWidget {
               const SizedBox(height: 100),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
-                child: isMobile
-                    ? Wrap(
-                        spacing: spacingBetweenCards,
-                        runSpacing: 20,
+                child: isMobile || isMediumScreen
+                    ? Column(
                         children: [
                           SizedBox(
                             width: cardWidth,
@@ -77,6 +77,7 @@ class SectionEducation extends StatelessWidget {
                               width: cardWidth,
                             ),
                           ),
+                          const SizedBox(height: 40),
                           SizedBox(
                             width: cardWidth,
                             child: CardsCertificates(
@@ -89,6 +90,7 @@ class SectionEducation extends StatelessWidget {
                               width: cardWidth,
                             ),
                           ),
+                          const SizedBox(height: 40),
                           SizedBox(
                             width: cardWidth,
                             child: CardsCertificates(
