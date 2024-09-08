@@ -23,47 +23,59 @@ class BankScreenProject extends StatelessWidget {
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 600;
-              final imageHeight = isMobile ? 300.0 : 500.0;
+              final isTablet =
+                  constraints.maxWidth >= 600 && constraints.maxWidth < 900;
+              final imageHeight = isMobile
+                  ? 300.0
+                  : isTablet
+                      ? 400.0
+                      : 500.0;
+              final fontSize = isMobile
+                  ? 18.0
+                  : isTablet
+                      ? 20.0
+                      : 25.0;
 
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (isMobile) ...[
-                    const Text(
+                  if (isMobile || isTablet) ...[
+                    Text(
                       'Esta é uma tela de banco estática que desenvolvi, contendo:'
-                      'Um cartão com informações, números de renda e gastos,'
-                      'seção de serviços rápidos (transferência e pausar cartão) e'
-                      'também informações de transações.',
+                      ' Um cartão com informações, números de renda e gastos,'
+                      ' seção de serviços rápidos (transferência e pausar cartão) e'
+                      ' também informações de transações.'
+                      '\n',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
-                        fontSize: 18,
+                        fontSize: fontSize,
                         color: Colors.white,
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    Text(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
-                        fontSize: 18,
+                        fontSize: fontSize,
                         color: Colors.white,
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    Text(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
-                        fontSize: 18,
+                        fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    Text(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
-                        fontSize: 18,
+                        fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -80,7 +92,11 @@ class BankScreenProject extends StatelessWidget {
                       runSpacing: 10,
                       children: List.generate(imagePaths.length, (index) {
                         return SizedBox(
-                          width: 150,
+                          width: isMobile
+                              ? 150
+                              : isTablet
+                                  ? 200
+                                  : 250,
                           height: imageHeight,
                           child: GestureDetector(
                             onTap: () {
@@ -104,13 +120,13 @@ class BankScreenProject extends StatelessWidget {
                     ),
                   ] else ...[
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         style: TextStyle(
                           fontFamily: 'Cormorant Garamond',
-                          fontSize: 25,
+                          fontSize: fontSize,
                           color: Colors.white,
                         ),
-                        children: [
+                        children: const [
                           TextSpan(
                             text:
                                 'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
