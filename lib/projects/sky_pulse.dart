@@ -27,6 +27,8 @@ class SkyPulseProject extends StatelessWidget {
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 600;
+              final isTablet =
+                  constraints.maxWidth >= 600 && constraints.maxWidth < 1024;
               final imageHeight = isMobile ? 300.0 : 500.0;
 
               return Column(
@@ -92,6 +94,12 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/sky_pulse'),
+                    ),
                     const SizedBox(height: 30),
                     Wrap(
                       spacing: 10,
@@ -116,6 +124,97 @@ class SkyPulseProject extends StatelessWidget {
                               imagePath: imagePaths[index],
                               height: imageHeight,
                             ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ] else if (isTablet) ...[
+                    const Text(
+                      'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas'
+                      ' da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.'
+                      ' Contém a sua tela inicial com o campo de texto que o usuário colocará a'
+                      ' cidade escolhida, em seguida a tela que lhe mostra as informações climáticas'
+                      ' da cidade. Pensando em uma forma agradável de informar um erro ao usuário,'
+                      ' o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.'
+                      '\n',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Neste projeto usei:',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      '• Flutter',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      '• Dart',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      '• BLoC',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      '• Consumi uma API Rest.',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/sky_pulse'),
+                    ),
+                    const SizedBox(height: 30),
+                    Wrap(
+                      spacing: 20,
+                      runSpacing: 20,
+                      children: List.generate(imagePaths.length, (index) {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FullScreenImage(
+                                  imagePaths: imagePaths,
+                                  initialIndex: index,
+                                ),
+                              ),
+                            );
+                          },
+                          child: ZoomImage(
+                            imagePath: imagePaths[index],
+                            height: imageHeight,
                           ),
                         );
                       }),
@@ -178,6 +277,12 @@ class SkyPulseProject extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 50),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/sky_pulse'),
+                    ),
                     const SizedBox(height: 30),
                     Wrap(
                       spacing: 20,
@@ -202,17 +307,11 @@ class SkyPulseProject extends StatelessWidget {
                         );
                       }),
                     ),
-                  ],
+                  ]
                 ],
               );
             },
           ),
-          const SizedBox(height: 50),
-          LinkButton(
-            text: 'Ver repositório no GitHub',
-            url: Uri.parse('https://github.com/leonardovivo/sky_pulse'),
-          ),
-          const SizedBox(height: 50),
         ],
       ),
     );
