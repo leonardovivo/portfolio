@@ -25,7 +25,13 @@ class LoginScreenProject extends StatelessWidget {
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 600;
-              final imageHeight = isMobile ? 300.0 : 500.0;
+              final isTablet =
+                  constraints.maxWidth >= 600 && constraints.maxWidth < 1024;
+              final imageHeight = isMobile
+                  ? 300.0
+                  : isTablet
+                      ? 400.0
+                      : 500.0;
 
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,12 +39,13 @@ class LoginScreenProject extends StatelessWidget {
                   if (isMobile) ...[
                     const Text(
                       'Telas de Login e Registro de usuário, com campos específicos de:'
-                      'Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).'
-                      'Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",'
-                      'três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)'
-                      'e dois botões em formato de texto que perguntam se o usuário tem ou não uma conta,'
-                      'que ao serem clicados, levam ele para a tela de Login ou Registro, dependendo'
-                      'do botão que for apertado.',
+                      ' Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).'
+                      ' Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",'
+                      ' três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)'
+                      ' e dois botões em formato de texto que perguntam se o usuário tem ou não uma conta,'
+                      ' que ao serem clicados, levam ele para a tela de Login ou Registro, dependendo'
+                      ' do botão que for apertado.'
+                      '\n',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
                         fontSize: 18,
@@ -74,12 +81,96 @@ class LoginScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/account_interface'),
+                    ),
+                    const SizedBox(height: 30),
                     Wrap(
                       spacing: 10,
                       runSpacing: 10,
                       children: List.generate(imagePaths.length, (index) {
                         return SizedBox(
                           width: 150,
+                          height: imageHeight,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => FullScreenImage(
+                                    imagePaths: imagePaths,
+                                    initialIndex: index,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: ZoomImage(
+                              imagePath: imagePaths[index],
+                              height: imageHeight,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ] else if (isTablet) ...[
+                    const Text(
+                      'Telas de Login e Registro de usuário, com campos específicos de:'
+                      ' Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).'
+                      ' Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",'
+                      ' três botões com opções de Login e Registro diferentes (Facebook, Google e Apple)'
+                      ' e dois botões em formato de texto que perguntam se o usuário tem ou não uma conta,'
+                      ' que ao serem clicados, levam ele para a tela de Login ou Registro, dependendo'
+                      ' do botão que for apertado.'
+                      '\n',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Neste aplicativo usei:',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      '• Flutter',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      '• Dart',
+                      style: TextStyle(
+                        fontFamily: 'Cormorant Garamond',
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/account_interface'),
+                    ),
+                    const SizedBox(height: 30),
+                    Wrap(
+                      spacing: 15,
+                      runSpacing: 15,
+                      children: List.generate(imagePaths.length, (index) {
+                        return SizedBox(
+                          width: 200,
                           height: imageHeight,
                           child: GestureDetector(
                             onTap: () {
@@ -144,6 +235,12 @@ class LoginScreenProject extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 50),
+                    LinkButton(
+                      text: 'Ver repositório no GitHub',
+                      url: Uri.parse(
+                          'https://github.com/leonardovivo/account_interface'),
+                    ),
                     const SizedBox(height: 30),
                     Wrap(
                       spacing: 20,
@@ -172,11 +269,6 @@ class LoginScreenProject extends StatelessWidget {
                 ],
               );
             },
-          ),
-          const SizedBox(height: 50),
-          LinkButton(
-            text: 'Ver repositório no GitHub',
-            url: Uri.parse('https://github.com/leonardovivo/account_interface'),
           ),
           const SizedBox(height: 50),
         ],
