@@ -7,46 +7,50 @@ class SectionAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        bool isMobile = constraints.maxWidth < 600;
-        bool isTablet =
-            constraints.maxWidth >= 600 && constraints.maxWidth < 1024;
+        double screenWidth = constraints.maxWidth;
 
-        double fontSizeTitle = isMobile ? 60 : 100;
-        double fontSizeText = isMobile ? 16 : 25;
-        double paddingLeft = isMobile ? 20 : 50;
-        double paddingVertical = isMobile ? 50 : 100;
+        bool isMobile = screenWidth < 600;
+
+        bool isIntermediate = screenWidth >= 800 && screenWidth < 1024;
+
+        double fontSizeTitle =
+            isMobile ? 50 : 90;
+        double fontSizeText = isMobile ? 14 : 22;
+        double paddingLeft =
+            isMobile ? 10 : 40;
+        double paddingVertical = isMobile ? 30 : 80;
+
+        double adaptiveFontSizeText = isIntermediate ? 18 : fontSizeText;
 
         return SingleChildScrollView(
           child: Column(
             children: [
               Padding(
                 padding: EdgeInsets.only(left: paddingLeft),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'SOBRE MIM',
-                            style: TextStyle(
-                              fontSize: fontSizeTitle,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white.withOpacity(0.1),
-                            ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'SOBRE MIM',
+                          style: TextStyle(
+                            fontSize: fontSizeTitle,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.1),
                           ),
-                          TextSpan(
-                            text: '.',
-                            style: TextStyle(
-                              fontSize: isMobile ? fontSizeTitle : 100,
-                              fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 145, 0, 255),
-                            ),
+                        ),
+                        TextSpan(
+                          text: '.',
+                          style: TextStyle(
+                            fontSize: isMobile ? fontSizeTitle : 100,
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromARGB(255, 145, 0, 255),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
               SizedBox(height: paddingVertical),
@@ -57,18 +61,13 @@ class SectionAbout extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        isTablet
-                            ? 'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
-                                'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
-                                'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'
-                                ' e nunca me arrependo de terminar o que comecei.'
-                            : 'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,\n'
-                                'principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.\n'
-                                'Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim\n'
-                                'e nunca me arrependo de terminar o que comecei.',
+                        'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,'
+                        ' principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.'
+                        ' Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'
+                        ' e nunca me arrependo de terminar o que comecei.',
                         style: TextStyle(
                           fontFamily: 'Cormorant Garamond',
-                          fontSize: fontSizeText,
+                          fontSize: adaptiveFontSizeText,
                           color: Colors.white,
                         ),
                         textAlign: TextAlign.center,
