@@ -22,11 +22,11 @@ class _PortifolioPageState extends State<PortifolioPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isMobile = constraints.maxWidth < 600;
+        final isMobileOrTablet = constraints.maxWidth < 1024;
 
         return Scaffold(
           appBar: AppBar(
-            actions: !isMobile
+            actions: !isMobileOrTablet
                 ? [
                     TextButton(
                       onPressed: () => itemScrollController.scrollTo(
@@ -35,7 +35,7 @@ class _PortifolioPageState extends State<PortifolioPage> {
                         curve: Curves.easeInOut,
                       ),
                       child: const Text(
-                        'Voltar ao Início',
+                        'Início',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
@@ -104,7 +104,7 @@ class _PortifolioPageState extends State<PortifolioPage> {
                   ]
                 : null,
           ),
-          drawer: isMobile
+          drawer: isMobileOrTablet
               ? Drawer(
                   child: ListView(
                     children: [
@@ -118,7 +118,7 @@ class _PortifolioPageState extends State<PortifolioPage> {
                         ),
                       ),
                       ListTile(
-                        title: const Text('Voltar ao Início'),
+                        title: const Text('Início'),
                         onTap: () => itemScrollController.scrollTo(
                           index: 0,
                           duration: const Duration(seconds: 1),
