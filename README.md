@@ -8,4 +8,4 @@ Informações sobre mim, minhas habilidades e meus projetos
 
 ## Veja meu portfólio:
 
-[Clique aqui para acessar](https://leonardovivo.github.io/portfolio/)
+<a href="https://leonardovivo.github.io/portfolio/" target="_blank">Clique aqui para acessar</a>
