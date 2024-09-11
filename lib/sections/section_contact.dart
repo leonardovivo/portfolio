@@ -79,65 +79,139 @@ class SectionContact extends StatelessWidget {
 
   Widget contactLinks({required bool isMobile}) {
     const iconSize = 25.0;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.mail,
-              color: Colors.white,
-              size: 25,
-            ),
-            const SizedBox(height: 20),
-            const Icon(
-              Icons.phone,
-              color: Colors.white,
-              size: 25,
-            ),
-            const SizedBox(height: 20),
-            Image.asset(
-              'assets/icons/github.png',
-              width: iconSize,
-              height: iconSize,
-              color: Colors.white,
-            ),
-            const SizedBox(height: 20),
-            Image.asset(
-              'assets/icons/linkedin.png',
-              width: 30,
-              height: 30,
-            ),
-          ],
-        ),
-        const SizedBox(width: 10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            LinkTextButton(
-              text: 'leonardovivo3@gmail.com',
-              url: Uri(scheme: 'mailto', path: 'leonardovivo3@gmail.com'),
-            ),
-            const SizedBox(height: 11),
-            LinkTextButton(
-              text: '+55 11 94385-8097',
-              url: Uri(scheme: 'tel', path: '+5511943858097'),
-            ),
-            const SizedBox(height: 14),
-            LinkTextButton(
-              text: 'GitHub',
-              url: Uri.parse('https://github.com/leonardovivo'),
-            ),
-            const SizedBox(height: 14),
-            LinkTextButton(
-              text: 'LinkedIn',
-              url: Uri.parse(
-                  'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
-            ),
-          ],
-        ),
-      ],
-    );
+
+    if (isMobile) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.mail,
+                color: Colors.white,
+                size: iconSize,
+              ),
+              const SizedBox(width: 10),
+              LinkTextButton(
+                text: 'leonardovivo3@gmail.com',
+                url: Uri(scheme: 'mailto', path: 'leonardovivo3@gmail.com'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 11),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.phone,
+                color: Colors.white,
+                size: iconSize,
+              ),
+              const SizedBox(width: 10),
+              LinkTextButton(
+                text: '+55 11 94385-8097',
+                url: Uri(scheme: 'tel', path: '+5511943858097'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/icons/github.png',
+                width: iconSize,
+                height: iconSize,
+                color: Colors.white,
+              ),
+              const SizedBox(width: 10),
+              LinkTextButton(
+                text: 'GitHub',
+                url: Uri.parse('https://github.com/leonardovivo'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/icons/linkedin.png',
+                width: 30,
+                height: 30,
+              ),
+              const SizedBox(width: 10),
+              LinkTextButton(
+                text: 'LinkedIn',
+                url: Uri.parse(
+                    'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
+              ),
+            ],
+          ),
+        ],
+      );
+    } else {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.mail,
+                color: Colors.white,
+                size: iconSize,
+              ),
+              const SizedBox(height: 20),
+              const Icon(
+                Icons.phone,
+                color: Colors.white,
+                size: iconSize,
+              ),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/icons/github.png',
+                width: iconSize,
+                height: iconSize,
+                color: Colors.white,
+              ),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/icons/linkedin.png',
+                width: 30,
+                height: 30,
+              ),
+            ],
+          ),
+          const SizedBox(width: 10),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              LinkTextButton(
+                text: 'leonardovivo3@gmail.com',
+                url: Uri(scheme: 'mailto', path: 'leonardovivo3@gmail.com'),
+              ),
+              const SizedBox(height: 11),
+              LinkTextButton(
+                text: '+55 11 94385-8097',
+                url: Uri(scheme: 'tel', path: '+5511943858097'),
+              ),
+              const SizedBox(height: 14),
+              LinkTextButton(
+                text: 'GitHub',
+                url: Uri.parse('https://github.com/leonardovivo'),
+              ),
+              const SizedBox(height: 14),
+              LinkTextButton(
+                text: 'LinkedIn',
+                url: Uri.parse(
+                    'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
+              ),
+            ],
+          ),
+        ],
+      );
+    }
   }
 }
