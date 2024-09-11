@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_about.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_contact.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_education.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_intro.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_projects.dart';
-import 'package:portifolio_leonardo_vivo/sections/section_skills.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_about.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_contact.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_education.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_intro.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_projects.dart';
+import 'package:portfolio_leonardo_vivo/sections/section_skills.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class PortifolioPage extends StatefulWidget {

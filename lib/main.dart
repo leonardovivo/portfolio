@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/page/portifolio_page.dart';
+import 'package:portfolio_leonardo_vivo/page/portifolio_page.dart';
 
 void main() {
   runApp(const MeuPortifolio());
@@ -11,7 +11,7 @@ class MeuPortifolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Portifólio Leonardo Vivo',
+      title: 'Portfólio Leonardo Vivo',
       theme: ThemeData.dark().copyWith(
       ),
       home: const PortifolioPage(),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/widgets/cards_certificates.dart';
+import 'package:portfolio_leonardo_vivo/widgets/cards_certificates.dart';
 
 class SectionEducation extends StatelessWidget {
   const SectionEducation({super.key});

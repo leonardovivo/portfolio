@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/widgets/link_text_button.dart';
+import 'package:portfolio_leonardo_vivo/widgets/link_text_button.dart';
 
 class SectionContact extends StatelessWidget {
   const SectionContact({super.key});

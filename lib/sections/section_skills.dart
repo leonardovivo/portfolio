@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/widgets/bullet_point.dart';
-import 'package:portifolio_leonardo_vivo/widgets/zoom_card.dart';
+import 'package:portfolio_leonardo_vivo/widgets/bullet_point.dart';
+import 'package:portfolio_leonardo_vivo/widgets/zoom_card.dart';
 
 class SectionSkills extends StatelessWidget {
   const SectionSkills({super.key});

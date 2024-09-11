@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/controller/animated_controller.dart';
-import 'package:portifolio_leonardo_vivo/screens/fullscreen_image.dart';
-import 'package:portifolio_leonardo_vivo/widgets/link_button.dart';
-import 'package:portifolio_leonardo_vivo/widgets/zoom_image.dart';
+import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
+import 'package:portfolio_leonardo_vivo/screens/fullscreen_image.dart';
+import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
+import 'package:portfolio_leonardo_vivo/widgets/zoom_image.dart';
 
 class BankScreenProject extends StatelessWidget {
   const BankScreenProject({super.key});

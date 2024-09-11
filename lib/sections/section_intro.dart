@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:portifolio_leonardo_vivo/widgets/svg_button.dart';
+import 'package:portfolio_leonardo_vivo/widgets/svg_button.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class SectionIntro extends StatelessWidget {

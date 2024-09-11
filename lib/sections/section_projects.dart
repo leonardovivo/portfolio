@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio_leonardo_vivo/projects/bank_screen.dart';
-import 'package:portifolio_leonardo_vivo/projects/login_screen.dart';
-import 'package:portifolio_leonardo_vivo/projects/sky_pulse.dart';
+import 'package:portfolio_leonardo_vivo/projects/bank_screen.dart';
+import 'package:portfolio_leonardo_vivo/projects/login_screen.dart';
+import 'package:portfolio_leonardo_vivo/projects/sky_pulse.dart';
 
 class SectionProjects extends StatelessWidget {
   const SectionProjects({super.key});
