@@ -56,15 +56,17 @@ class SectionContact extends StatelessWidget {
                       alignment: Alignment.bottomCenter,
                       child: Padding(
                         padding: EdgeInsets.only(bottom: isMobile ? 10 : 20),
-                        child: Text(
-                          '2024 - Code by Leonardo Vivo Guerreiro',
-                          style: TextStyle(
-                            fontFamily: "Cormorant Garamond",
-                            fontSize: isMobile ? 16 : 18,
-                            color: Colors.white.withOpacity(0.7),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        child: isMobile
+                            ? const SizedBox.shrink()
+                            : Text(
+                                '2024 - Code by Leonardo Vivo Guerreiro',
+                                style: TextStyle(
+                                  fontFamily: "Cormorant Garamond",
+                                  fontSize: 18,
+                                  color: Colors.white.withOpacity(0.7),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                       ),
                     ),
                   ],
