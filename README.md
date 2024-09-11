@@ -6,4 +6,6 @@ Este é o meu portfólio como Desenvolvedor, feito com Flutter Web
 
 Informações sobre mim, minhas habilidades e meus projetos
 
-## Link do portfólio:
+## Veja meu portfólio:
+
+[Clique aqui para acessar](https://leonardovivo.github.io/portfolio/)
