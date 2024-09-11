@@ -28,49 +28,29 @@ class SectionContact extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.all(isMobile ? 10 : 20),
-                      child: isMobile
-                          ? Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'Eu estou disponível para novas\n'
-                                  'oportunidades. Entre em contato\n'
-                                  'por algum desses links.',
-                                  style: TextStyle(
-                                    fontFamily: "Cormorant Garamond",
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                                const SizedBox(height: 20),
-                                contactLinks(),
-                              ],
-                            )
-                          : Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 20),
-                                  child: Text(
-                                    'Eu estou disponível para novas\n'
-                                    'oportunidades. Entre em contato\n'
-                                    'por algum desses links.',
-                                    style: TextStyle(
-                                      fontFamily: "Cormorant Garamond",
-                                      fontSize: 23,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                                const SizedBox(height: 20),
-                                contactLinks(),
-                              ],
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              'Eu estou disponível para novas\n'
+                              'oportunidades. Entre em contato\n'
+                              'por algum desses links.',
+                              style: TextStyle(
+                                fontFamily: "Cormorant Garamond",
+                                fontSize: 23,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.center,
                             ),
+                          ),
+                          const SizedBox(height: 20),
+                          contactLinks(isMobile: isMobile),
+                        ],
+                      ),
                     ),
                     Align(
                       alignment: Alignment.bottomCenter,
@@ -97,12 +77,13 @@ class SectionContact extends StatelessWidget {
     );
   }
 
-  contactLinks() {
+  Widget contactLinks({required bool isMobile}) {
+    const iconSize = 25.0;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Adicionei isso
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(
               Icons.mail,
@@ -118,8 +99,8 @@ class SectionContact extends StatelessWidget {
             const SizedBox(height: 20),
             Image.asset(
               'assets/icons/github.png',
-              width: 25,
-              height: 25,
+              width: iconSize,
+              height: iconSize,
               color: Colors.white,
             ),
             const SizedBox(height: 20),
@@ -132,7 +113,7 @@ class SectionContact extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Adicionei isso
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             LinkTextButton(
               text: 'leonardovivo3@gmail.com',
