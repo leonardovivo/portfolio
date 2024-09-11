@@ -37,11 +37,11 @@ class SkyPulseProject extends StatelessWidget {
                   if (isMobile) ...[
                     const Text(
                       'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas'
-                      'da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.'
-                      'Contém a sua tela inicial com o campo de texto que o usuário colocará a'
-                      'cidade escolhida, em seguida a tela que lhe mostra as informações climáticas'
-                      'da cidade. Pensando em uma forma agradável de informar um erro ao usuário,'
-                      'o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.',
+                      ' da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.'
+                      ' Contém a sua tela inicial com o campo de texto que o usuário colocará a'
+                      ' cidade escolhida, em seguida a tela que lhe mostra as informações climáticas'
+                      ' da cidade. Pensando em uma forma agradável de informar um erro ao usuário,'
+                      ' o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.',
                       style: TextStyle(
                         fontFamily: 'Cormorant Garamond',
                         fontSize: 18,
