@@ -4,7 +4,7 @@ Este é o meu portfólio como Desenvolvedor, feito com Flutter Web
 
 ## Você encontrará:
 
-Informações sobre mim, minhas habilidades e meus projetos
+Informações sobre mim, meus projetos e minhas habilidades
 
 ## Veja meu portfólio:
 
