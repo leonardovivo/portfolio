@@ -34,7 +34,7 @@ class BankScreenProject extends StatelessWidget {
                   ? 18.0
                   : isTablet
                       ? 20.0
-                      : 25.0;
+                      : 20.0;
 
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class BankScreenProject extends StatelessWidget {
                       ' também informações de transações.'
                       '\n',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: fontSize,
                         color: Colors.white,
                       ),
@@ -56,7 +56,7 @@ class BankScreenProject extends StatelessWidget {
                     Text(
                       'Neste aplicativo usei:',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: fontSize,
                         color: Colors.white,
                       ),
@@ -65,7 +65,7 @@ class BankScreenProject extends StatelessWidget {
                     Text(
                       '• Flutter',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -74,7 +74,7 @@ class BankScreenProject extends StatelessWidget {
                     Text(
                       '• Dart',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -122,7 +122,7 @@ class BankScreenProject extends StatelessWidget {
                     RichText(
                       text: TextSpan(
                         style: TextStyle(
-                          fontFamily: 'Cormorant Garamond',
+                          fontFamily: 'Poppins',
                           fontSize: fontSize,
                           color: Colors.white,
                         ),

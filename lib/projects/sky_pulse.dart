@@ -43,7 +43,7 @@ class SkyPulseProject extends StatelessWidget {
                       ' da cidade. Pensando em uma forma agradável de informar um erro ao usuário,'
                       ' o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -52,7 +52,7 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       'Neste aplicativo usei:',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -61,7 +61,7 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Flutter',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -70,7 +70,7 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Dart',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -79,7 +79,7 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• BLoC',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -88,7 +88,7 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Consumi uma API Rest.',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -138,8 +138,8 @@ class SkyPulseProject extends StatelessWidget {
                       ' o Sky Pulse também tem a sua tela de erro, informando ao usuário os dois possíveis erros.'
                       '\n',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         color: Colors.white,
                       ),
                     ),
@@ -147,8 +147,8 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       'Neste projeto usei:',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         color: Colors.white,
                       ),
                     ),
@@ -156,8 +156,8 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Flutter',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -165,8 +165,8 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Dart',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -174,8 +174,8 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• BLoC',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -183,8 +183,8 @@ class SkyPulseProject extends StatelessWidget {
                     const Text(
                       '• Consumi uma API Rest.',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
-                        fontSize: 22,
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -223,8 +223,8 @@ class SkyPulseProject extends StatelessWidget {
                     RichText(
                       text: const TextSpan(
                         style: TextStyle(
-                          fontFamily: 'Cormorant Garamond',
-                          fontSize: 25,
+                          fontFamily: 'Poppins',
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                         children: [

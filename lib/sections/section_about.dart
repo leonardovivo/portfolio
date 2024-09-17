@@ -66,7 +66,7 @@ class SectionAbout extends StatelessWidget {
                         ' Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'
                         ' e nunca me arrependo de terminar o que comecei.',
                         style: TextStyle(
-                          fontFamily: 'Cormorant Garamond',
+                          fontFamily: 'Poppins',
                           fontSize: adaptiveFontSizeText,
                           color: Colors.white,
                         ),
