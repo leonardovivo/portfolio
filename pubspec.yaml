@@ -96,6 +96,9 @@ flutter:
     - family: Cormorant Garamond
       fonts:
         - asset: assets/fonts/CormorantGaramond-Light.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
