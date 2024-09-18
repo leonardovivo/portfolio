@@ -15,7 +15,7 @@ class SectionAbout extends StatelessWidget {
 
         double fontSizeTitle =
             isMobile ? 50 : 90;
-        double fontSizeText = isMobile ? 14 : 22;
+        double fontSizeText = isMobile ? 14 : 20;
         double paddingLeft =
             isMobile ? 10 : 40;
         double paddingVertical = isMobile ? 30 : 80;
