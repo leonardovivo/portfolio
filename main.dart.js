@@ -67050,9 +67050,9 @@ return A.IQ(A.dc(A.a([new A.c7(new A.aF(m,0,0,0),new A.f8(B.jt,s,s,A.lh(s,s,s,B.
 $S:423}
 A.Ix.prototype={
 I(a){return A.IQ(new A.eN(new A.a4O(this),null))},
-a3P(a){var s="leonardovivo3@gmail.com",r=null,q="+55 11 94385-8097",p="+5511943858097",o="assets/icons/github.png",n="https://github.com/leonardovivo",m="assets/icons/linkedin.png",l="LinkedIn",k=t.p
-if(a)return A.dc(A.a([A.h0(A.a([B.l6,B.c1,new A.hA(s,A.oA(r,s,r,"mailto"),r)],k),B.J,B.aB,B.aC),B.wo,A.h0(A.a([B.l7,B.c1,new A.hA(q,A.oA(r,p,r,"tel"),r)],k),B.J,B.aB,B.aC),B.f8,A.h0(A.a([A.vi(o,B.h,r,25,25),B.c1,new A.hA("GitHub",A.cA(n,0,r),r)],k),B.J,B.aB,B.aC),B.f8,A.h0(A.a([A.vi(m,r,r,30,30),B.c1,new A.hA(l,A.cA(u.R,0,r),r)],k),B.J,B.aB,B.aC)],k),B.J,B.aB)
-else return A.h0(A.a([A.dc(A.a([B.l6,B.ar,B.l7,B.ar,A.vi(o,B.h,r,25,25),B.ar,A.vi(m,r,r,30,30)],k),B.J,B.aB),B.c1,A.dc(A.a([new A.hA(s,A.oA(r,s,r,"mailto"),r),B.wo,new A.hA(q,A.oA(r,p,r,"tel"),r),B.f8,new A.hA("GitHub",A.cA(n,0,r),r),B.f8,new A.hA(l,A.cA("https://www.linkedin.com/in/leonardo-vivo-guerreiro/",0,r),r)],k),B.a2,B.M)],k),B.J,B.aB,B.aC)}}
+a3P(a){var s="leonardovivo3@gmail.com",r=null,q="+55 11 94385-8097",p="+5511943858097",o="assets/icons/github.png",n="https://github.com/leonardovivo",m="assets/icons/linkedin.png",l="LinkedIn",k=u.R,j=t.p
+if(a)return A.dc(A.a([A.h0(A.a([B.l6,B.c1,new A.hA(s,A.oA(r,s,r,"mailto"),r)],j),B.J,B.aB,B.aC),B.wo,A.h0(A.a([B.l7,B.c1,new A.hA(q,A.oA(r,p,r,"tel"),r)],j),B.J,B.aB,B.aC),B.f8,A.h0(A.a([A.vi(o,B.h,r,25,25),B.c1,new A.hA("GitHub",A.cA(n,0,r),r)],j),B.J,B.aB,B.aC),B.f8,A.h0(A.a([A.vi(m,r,r,30,30),B.c1,new A.hA(l,A.cA(k,0,r),r)],j),B.J,B.aB,B.aC)],j),B.J,B.aB)
+else return A.h0(A.a([A.dc(A.a([B.l6,B.ar,B.l7,B.ar,A.vi(o,B.h,r,25,25),B.ar,A.vi(m,r,r,30,30)],j),B.J,B.aB),B.c1,A.dc(A.a([new A.hA(s,A.oA(r,s,r,"mailto"),r),B.wo,new A.hA(q,A.oA(r,p,r,"tel"),r),B.f8,new A.hA("GitHub",A.cA(n,0,r),r),B.f8,new A.hA(l,A.cA(k,0,r),r)],j),B.a2,B.M)],j),B.J,B.aB,B.aC)}}
 A.a4O.prototype={
 $2(a,b){var s,r,q,p,o,n=null,m=b.b,l=m<600,k=m>=600&&m<900
 if(l)m=400
