@@ -147,7 +147,7 @@ class SectionContact extends StatelessWidget {
               LinkTextButton(
                 text: 'LinkedIn',
                 url: Uri.parse(
-                    'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
+                    'https://www.linkedin.com/in/leonardovivoguerreiro/'),
               ),
             ],
           ),
