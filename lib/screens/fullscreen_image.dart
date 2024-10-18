@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class FullScreenImage extends StatefulWidget {
   final List<String> imagePaths;
   final int initialIndex;
-  final double imageHeight; // Adicione a altura da imagem como parâmetro
+  final double imageHeight;
 
   const FullScreenImage({
     super.key,
     required this.imagePaths,
     this.initialIndex = 0,
-    this.imageHeight = 700, // Defina um valor padrão para a altura
+    this.imageHeight = 700,
   });
 
   @override
@@ -52,7 +52,7 @@ class _FullScreenImageState extends State<FullScreenImage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: SizedBox(
-                      height: widget.imageHeight, // Defina a altura aqui
+                      height: widget.imageHeight,
                       child: Image.asset(
                         widget.imagePaths[index],
                         fit: BoxFit.contain,
@@ -66,7 +66,8 @@ class _FullScreenImageState extends State<FullScreenImage> {
           Positioned(
             left: 20,
             child: IconButton(
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.white, size: 40),
+              icon: const Icon(Icons.arrow_back_ios,
+                  color: Colors.white, size: 40),
               onPressed: () {
                 _pageController.previousPage(
                   duration: const Duration(milliseconds: 300),
@@ -78,7 +79,8 @@ class _FullScreenImageState extends State<FullScreenImage> {
           Positioned(
             right: 20,
             child: IconButton(
-              icon: const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 40),
+              icon: const Icon(Icons.arrow_forward_ios,
+                  color: Colors.white, size: 40),
               onPressed: () {
                 _pageController.nextPage(
                   duration: const Duration(milliseconds: 300),
