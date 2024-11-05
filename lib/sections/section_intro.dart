@@ -60,7 +60,7 @@ class SectionIntro extends StatelessWidget {
                           SvgButton(
                             assetPath: 'assets/icons/linkedin.svg',
                             url: Uri.parse(
-                                'https://www.linkedin.com/in/leonardo-vivo-guerreiro/'),
+                                'https://www.linkedin.com/in/leonardovivoguerreiro/'),
                             hoverColor: Colors.blue,
                           )
                               .animate()

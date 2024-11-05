@@ -15,7 +15,7 @@ class SectionAbout extends StatelessWidget {
 
         double fontSizeTitle =
             isMobile ? 50 : 90;
-        double fontSizeText = isMobile ? 14 : 22;
+        double fontSizeText = isMobile ? 14 : 20;
         double paddingLeft =
             isMobile ? 10 : 40;
         double paddingVertical = isMobile ? 30 : 80;
@@ -66,7 +66,7 @@ class SectionAbout extends StatelessWidget {
                         ' Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'
                         ' e nunca me arrependo de terminar o que comecei.',
                         style: TextStyle(
-                          fontFamily: 'Cormorant Garamond',
+                          fontFamily: 'Poppins',
                           fontSize: adaptiveFontSizeText,
                           color: Colors.white,
                         ),

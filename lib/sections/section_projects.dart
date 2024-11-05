@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/projects/bank_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/login_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/sky_pulse.dart';
+import 'package:portfolio_leonardo_vivo/projects/zero_byte.dart';
 
 class SectionProjects extends StatelessWidget {
   const SectionProjects({super.key});
@@ -53,6 +54,8 @@ class SectionProjects extends StatelessWidget {
             ),
             const SizedBox(height: 100),
             const SkyPulseProject(),
+            const SizedBox(height: 200),
+            const ZeroByteProject(),
             const SizedBox(height: 100),
             const LoginScreenProject(),
             const SizedBox(height: 100),

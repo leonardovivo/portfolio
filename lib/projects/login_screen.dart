@@ -47,7 +47,7 @@ class LoginScreenProject extends StatelessWidget {
                       ' do botão que for apertado.'
                       '\n',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -56,7 +56,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       'Neste aplicativo usei:',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -65,7 +65,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       '• Flutter',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -74,7 +74,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       '• Dart',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -125,7 +125,7 @@ class LoginScreenProject extends StatelessWidget {
                       ' do botão que for apertado.'
                       '\n',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 22,
                         color: Colors.white,
                       ),
@@ -134,7 +134,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       'Neste aplicativo usei:',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 22,
                         color: Colors.white,
                       ),
@@ -143,7 +143,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       '• Flutter',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -152,7 +152,7 @@ class LoginScreenProject extends StatelessWidget {
                     const Text(
                       '• Dart',
                       style: TextStyle(
-                        fontFamily: 'Cormorant Garamond',
+                        fontFamily: 'Poppins',
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -196,8 +196,8 @@ class LoginScreenProject extends StatelessWidget {
                     RichText(
                       text: const TextSpan(
                         style: TextStyle(
-                          fontFamily: 'Cormorant Garamond',
-                          fontSize: 25,
+                          fontFamily: 'Poppins',
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                         children: [
@@ -270,7 +270,6 @@ class LoginScreenProject extends StatelessWidget {
               );
             },
           ),
-          const SizedBox(height: 50),
         ],
       ),
     );
