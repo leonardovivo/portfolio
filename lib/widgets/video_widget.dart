@@ -19,16 +19,17 @@ class VideoWidget extends StatelessWidget {
           }
 
           return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              videoController.isInitialized
-                  ? AspectRatio(
-                      aspectRatio: videoController.controller.value.aspectRatio,
-                      child: VideoPlayer(videoController.controller),
-                    )
-                  : const CircularProgressIndicator(),
-              const SizedBox(height: 10),
+              if (videoController.isInitialized)
+                AspectRatio(
+                  aspectRatio: videoController.controller.value.aspectRatio,
+                  child: VideoPlayer(videoController.controller),
+                ),
+              const SizedBox(height: 5),
               if (videoController.isInitialized)
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
                       icon: const Icon(Icons.replay_10),
@@ -65,10 +66,10 @@ class VideoWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Container(
-                width: 50,
-                height: 50,
+                width: 45,
+                height: 45,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color.fromARGB(255, 145, 0, 255),
@@ -78,13 +79,13 @@ class VideoWidget extends StatelessWidget {
                     videoController.controller.value.isPlaying
                         ? Icons.pause
                         : Icons.play_arrow,
-                    size: 30,
+                    size: 28,
                     color: Colors.white,
                   ),
                   onPressed: videoController.togglePlayPause,
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -176,7 +176,6 @@ class ZeroByteProject extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
-                    const SizedBox(height: 30),
                   ] else ...[
                     RichText(
                       text: const TextSpan(
@@ -241,14 +240,13 @@ class ZeroByteProject extends StatelessWidget {
                       url: Uri.parse(
                           'https://github.com/leonardovivo/zero_byte'),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 50),
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
                   ],
                 ],
               );
             },
           ),
-          const SizedBox(height: 50),
         ],
       ),
     );

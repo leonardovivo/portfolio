@@ -270,7 +270,6 @@ class LoginScreenProject extends StatelessWidget {
               );
             },
           ),
-          const SizedBox(height: 50),
         ],
       ),
     );
