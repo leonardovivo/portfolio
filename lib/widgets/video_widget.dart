@@ -34,12 +34,12 @@ class VideoWidget extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.replay_10),
                       onPressed: () {
-                        videoController.seekTo(
-                            (videoController.currentPosition - 10).clamp(
-                                0,
-                                videoController
-                                    .controller.value.duration.inSeconds
-                                    .toDouble()));
+                        final newPosition = videoController.currentPosition - 10;
+                        videoController.seekTo(newPosition.clamp(
+                          0,
+                          videoController.controller.value.duration.inSeconds
+                              .toDouble(),
+                        ));
                       },
                     ),
                     Expanded(
@@ -48,20 +48,26 @@ class VideoWidget extends StatelessWidget {
                         min: 0.0,
                         max: videoController.controller.value.duration.inSeconds
                             .toDouble(),
+                        onChangeStart: (value) {
+                          videoController.pauseUpdates();
+                        },
                         onChanged: (value) {
                           videoController.seekTo(value);
+                        },
+                        onChangeEnd: (value) {
+                          videoController.resumeUpdates();
                         },
                       ),
                     ),
                     IconButton(
                       icon: const Icon(Icons.forward_10),
                       onPressed: () {
-                        videoController.seekTo(
-                            (videoController.currentPosition + 10).clamp(
-                                0,
-                                videoController
-                                    .controller.value.duration.inSeconds
-                                    .toDouble()));
+                        final newPosition = videoController.currentPosition + 10;
+                        videoController.seekTo(newPosition.clamp(
+                          0,
+                          videoController.controller.value.duration.inSeconds
+                              .toDouble(),
+                        ));
                       },
                     ),
                   ],

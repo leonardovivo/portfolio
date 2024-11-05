@@ -7,6 +7,7 @@ class VideoControllerProvider with ChangeNotifier {
   bool _hasError = false;
   double _playbackSpeed = 1.0;
   double _currentPosition = 0.0;
+  bool _isUpdatingPosition = true;
 
   VideoControllerProvider(String videoPath) {
     _initialize(videoPath);
@@ -25,43 +26,65 @@ class VideoControllerProvider with ChangeNotifier {
   void _initialize(String videoPath) {
     _controller = VideoPlayerController.asset(videoPath)
       ..initialize().then((_) {
-        _isInitialized = true;
-        notifyListeners();
-        _controller.play();
+        if (_controller.value.isInitialized) {
+          _isInitialized = true;
+          notifyListeners();
+        }
       }).catchError((error) {
         _hasError = true;
         notifyListeners();
       });
 
     _controller.addListener(() {
-      _currentPosition = _controller.value.position.inSeconds.toDouble();
-      notifyListeners();
+      if (_isUpdatingPosition && _controller.value.isInitialized) {
+        final newPosition = _controller.value.position.inSeconds.toDouble();
+        if ((_currentPosition - newPosition).abs() > 0.5) {
+          _currentPosition = newPosition;
+          notifyListeners();
+        }
+      }
     });
   }
 
   void togglePlayPause() {
-    if (_controller.value.isPlaying) {
-      _controller.pause();
-    } else {
-      _controller.play();
+    if (_isInitialized) {
+      if (_controller.value.isPlaying) {
+        _controller.pause();
+      } else {
+        _controller.play();
+      }
+      notifyListeners();
     }
-    notifyListeners();
   }
 
   void changeSpeed(double speed) {
-    _playbackSpeed = speed;
-    _controller.setPlaybackSpeed(_playbackSpeed);
-    notifyListeners();
+    if (_isInitialized) {
+      _playbackSpeed = speed;
+      _controller.setPlaybackSpeed(_playbackSpeed);
+      notifyListeners();
+    }
   }
 
   void seekTo(double value) {
-    final position = Duration(seconds: value.toInt());
-    _controller.seekTo(position);
+    if (_isInitialized) {
+      final position = Duration(seconds: value.toInt());
+      _controller.seekTo(position);
+      notifyListeners();
+    }
+  }
+
+  void pauseUpdates() {
+    _isUpdatingPosition = false;
+  }
+
+  void resumeUpdates() {
+    _isUpdatingPosition = true;
+    notifyListeners();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 }
