@@ -42,7 +42,7 @@ class SectionSkills extends StatelessWidget {
                   runSpacing: 20,
                   children: [
                     ZoomEducationItem(
-                      icon: Icons.code,
+                      icon: Icons.language,
                       skillName: 'Flutter',
                       description:
                           'Desenvolvimento de aplicações para dispositivos móveis',
@@ -50,7 +50,7 @@ class SectionSkills extends StatelessWidget {
                       width: isMobile ? 150 : 250,
                     ),
                     ZoomEducationItem(
-                      icon: Icons.language,
+                      icon: Icons.code,
                       skillName: 'Dart',
                       description:
                           'Prática com a linguagem de programação do Flutter',
@@ -62,6 +62,14 @@ class SectionSkills extends StatelessWidget {
                       skillName: 'BLoC',
                       description:
                           'Gerenciamento de estado utilizando BLoC no Flutter',
+                      height: isMobile ? 260 : 200,
+                      width: isMobile ? 150 : 250,
+                    ),
+                    ZoomEducationItem(
+                      icon: Icons.build,
+                      skillName: 'Provider',
+                      description:
+                          'Gerenciamento de estado utilizando Provider no Flutter',
                       height: isMobile ? 260 : 200,
                       width: isMobile ? 150 : 250,
                     ),
