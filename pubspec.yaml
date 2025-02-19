@@ -80,6 +80,7 @@ flutter:
   - assets/icons/github.svg
   - assets/icons/email.svg
   - assets/videos/zeroByte.mp4
+  - assets/videos/cryptoPulse.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
