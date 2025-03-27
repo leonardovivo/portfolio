@@ -37,7 +37,7 @@ class LoginScreenProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const Text(
+                    const SelectableText(
                       'Telas de Login e Registro de usuário, com campos específicos de:'
                       ' Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).'
                       ' Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",'
@@ -53,7 +53,7 @@ class LoginScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -62,7 +62,7 @@ class LoginScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -71,7 +71,7 @@ class LoginScreenProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -115,7 +115,7 @@ class LoginScreenProject extends StatelessWidget {
                       }),
                     ),
                   ] else if (isTablet) ...[
-                    const Text(
+                    const SelectableText(
                       'Telas de Login e Registro de usuário, com campos específicos de:'
                       ' Nome/Username, E-mail, senha e confirmação de senha (com opção de senha oculta).'
                       ' Também contém uma checkbox de "Lembrar de mim", um botão de "Esqueci a senha",'
@@ -131,7 +131,7 @@ class LoginScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -140,7 +140,7 @@ class LoginScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -149,7 +149,7 @@ class LoginScreenProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -193,8 +193,8 @@ class LoginScreenProject extends StatelessWidget {
                       }),
                     ),
                   ] else ...[
-                    RichText(
-                      text: const TextSpan(
+                    const SelectableText.rich(
+                      TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 20,

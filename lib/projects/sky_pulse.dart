@@ -35,7 +35,7 @@ class SkyPulseProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const Text(
+                    const SelectableText(
                       'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas'
                       ' da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.'
                       ' Contém a sua tela inicial com o campo de texto que o usuário colocará a'
@@ -49,7 +49,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -58,7 +58,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -67,7 +67,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -76,7 +76,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• BLoC',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -85,7 +85,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumi uma API Rest.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -129,7 +129,7 @@ class SkyPulseProject extends StatelessWidget {
                       }),
                     ),
                   ] else if (isTablet) ...[
-                    const Text(
+                    const SelectableText(
                       'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas'
                       ' da cidade que ele inserir. Ele cobre inúmeras cidades ao redor do mundo.'
                       ' Contém a sua tela inicial com o campo de texto que o usuário colocará a'
@@ -144,7 +144,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste projeto usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -153,7 +153,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -162,7 +162,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -171,7 +171,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• BLoC',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -180,7 +180,7 @@ class SkyPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumi uma API Rest.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -220,8 +220,8 @@ class SkyPulseProject extends StatelessWidget {
                       }),
                     ),
                   ] else ...[
-                    RichText(
-                      text: const TextSpan(
+                    const SelectableText.rich(
+                      TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 20,

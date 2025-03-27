@@ -25,7 +25,7 @@ class ZeroByteProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const Text(
+                    const SelectableText(
                       'Zero Byte é uma loja virtual voltada para produtos de tecnologia.'
                       ' O aplicativo permite que os usuários explorem uma ampla gama de produtos,'
                       ' com detalhes como imagens, descrições e preços, todos obtidos de uma API.'
@@ -47,7 +47,7 @@ class ZeroByteProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -56,7 +56,7 @@ class ZeroByteProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -65,7 +65,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -74,7 +74,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -83,7 +83,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Provider',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -101,7 +101,7 @@ class ZeroByteProject extends StatelessWidget {
                     const SizedBox(height: 20),
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
                   ] else if (isTablet) ...[
-                    const Text(
+                    const SelectableText(
                       'Zero Byte é uma loja virtual voltada para produtos de tecnologia.'
                       ' O aplicativo permite que os usuários explorem uma ampla gama de produtos,'
                       ' com detalhes como imagens, descrições e preços, todos obtidos de uma API.'
@@ -123,7 +123,7 @@ class ZeroByteProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -132,7 +132,7 @@ class ZeroByteProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -141,7 +141,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -150,7 +150,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -159,7 +159,7 @@ class ZeroByteProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Provider',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -177,8 +177,8 @@ class ZeroByteProject extends StatelessWidget {
                     const SizedBox(height: 20),
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
                   ] else ...[
-                    RichText(
-                      text: const TextSpan(
+                   const SelectableText.rich(
+                      TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 20,

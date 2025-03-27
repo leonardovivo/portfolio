@@ -57,7 +57,7 @@ class _ZoomableEducationItemState extends State<ZoomEducationItem> {
               children: [
                 Icon(widget.icon, size: 40, color: Colors.white),
                 const SizedBox(height: 10),
-                Text(
+                SelectableText(
                   widget.skillName,
                   style: const TextStyle(
                     fontSize: 18,
@@ -66,7 +66,7 @@ class _ZoomableEducationItemState extends State<ZoomEducationItem> {
                   ),
                 ),
                 const SizedBox(height: 5),
-                Text(
+                SelectableText(
                   widget.description,
                   style: const TextStyle(
                     fontSize: 16,

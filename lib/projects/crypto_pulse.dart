@@ -25,7 +25,7 @@ class CryptoPulseProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const Text(
+                    const SelectableText(
                       'Crypto Pulse é um app que exibe dados sobre 9 das criptomoedas mais populares,'
                       'consumindo informações de uma API Rest. No vídeo a seguir, duas delas são usadas'
                       'como exemplo para manter a demonstração objetiva, mas o comportamento é o mesmo para todas.'
@@ -37,7 +37,7 @@ class CryptoPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -46,7 +46,7 @@ class CryptoPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -55,7 +55,7 @@ class CryptoPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -64,7 +64,7 @@ class CryptoPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -83,7 +83,7 @@ class CryptoPulseProject extends StatelessWidget {
                     const VideoWidget(
                         videoPath: 'assets/videos/cryptoPulse.mp4'),
                   ] else if (isTablet) ...[
-                    const Text(
+                    const SelectableText(
                       'Crypto Pulse é um app que exibe dados sobre 9 das criptomoedas mais populares,'
                       'consumindo informações de uma API Rest. No vídeo a seguir, duas delas são usadas'
                       'como exemplo para manter a demonstração objetiva, mas o comportamento é o mesmo para todas.'
@@ -95,7 +95,7 @@ class CryptoPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    const SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -104,7 +104,7 @@ class CryptoPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
+                    const SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -113,7 +113,7 @@ class CryptoPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -122,7 +122,7 @@ class CryptoPulseProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    const SelectableText(
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -141,8 +141,8 @@ class CryptoPulseProject extends StatelessWidget {
                     const VideoWidget(
                         videoPath: 'assets/videos/cryptoPulse.mp4'),
                   ] else ...[
-                    RichText(
-                      text: const TextSpan(
+                    const SelectableText.rich(
+                      TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 20,

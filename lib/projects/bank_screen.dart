@@ -40,7 +40,7 @@ class BankScreenProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile || isTablet) ...[
-                    Text(
+                    SelectableText(
                       'Esta é uma tela de banco estática que desenvolvi, contendo:'
                       ' Um cartão com informações, números de renda e gastos,'
                       ' seção de serviços rápidos (transferência e pausar cartão) e'
@@ -53,7 +53,7 @@ class BankScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    Text(
+                    SelectableText(
                       'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -62,7 +62,7 @@ class BankScreenProject extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Text(
+                    SelectableText(
                       '• Flutter',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -71,7 +71,7 @@ class BankScreenProject extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
+                    SelectableText(
                       '• Dart',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -119,8 +119,8 @@ class BankScreenProject extends StatelessWidget {
                       }),
                     ),
                   ] else ...[
-                    RichText(
-                      text: TextSpan(
+                    SelectableText.rich(
+                      TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: fontSize,

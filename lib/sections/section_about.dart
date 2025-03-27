@@ -29,8 +29,8 @@ class SectionAbout extends StatelessWidget {
                 padding: EdgeInsets.only(left: paddingLeft),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: RichText(
-                    text: TextSpan(
+                  child: SelectableText.rich(
+                    TextSpan(
                       children: [
                         TextSpan(
                           text: 'SOBRE MIM',
@@ -60,7 +60,7 @@ class SectionAbout extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Flexible(
-                      child: Text(
+                      child: SelectableText(
                         'Apaixonado por tecnologia e programação, por conta disso, sempre gostei de criar coisas novas e aprender cada vez mais sobre,'
                         ' principalmente o que envolve Desenvolvimento Mobile. Aprendo rápido e com facilidade, além de ser proativo, esforçado e criativo.'
                         ' Extremamente focado e determinado em entregar o melhor resultado possível. Sempre que tiro meus projetos do papel, vou até o fim'

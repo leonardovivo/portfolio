@@ -26,8 +26,8 @@ class SectionProjects extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      RichText(
-                        text: TextSpan(
+                      SelectableText.rich(
+                         TextSpan(
                           children: [
                             TextSpan(
                               text: 'PROJETOS',

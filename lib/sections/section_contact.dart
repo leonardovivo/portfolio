@@ -34,7 +34,7 @@ class SectionContact extends StatelessWidget {
                         children: [
                           const Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20),
-                            child: Text(
+                            child: SelectableText(
                               'Eu estou disponível para novas\n'
                               'oportunidades. Entre em contato\n'
                               'por algum desses links.',
@@ -58,7 +58,7 @@ class SectionContact extends StatelessWidget {
                         padding: EdgeInsets.only(bottom: isMobile ? 10 : 20),
                         child: isMobile
                             ? const SizedBox.shrink()
-                            : Text(
+                            : SelectableText(
                                 '2024 - Code by Leonardo Vivo Guerreiro',
                                 style: TextStyle(
                                   fontFamily: "Cormorant Garamond",

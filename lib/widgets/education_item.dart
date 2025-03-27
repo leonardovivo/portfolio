@@ -43,7 +43,7 @@ class EducationItem extends StatelessWidget {
             color: Colors.white,
           ),
           const SizedBox(height: 10),
-          Text(
+          SelectableText(
             skillName,
             style: const TextStyle(
               fontSize: 20,
@@ -52,7 +52,7 @@ class EducationItem extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 5),
-          Text(
+          SelectableText(
             description,
             style: const TextStyle(
               fontSize: 16,

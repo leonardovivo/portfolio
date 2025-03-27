@@ -56,7 +56,7 @@ class _CardsCertificatesState extends State<CardsCertificates> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                SelectableText(
                   widget.typeCertificate,
                   style: const TextStyle(
                     fontSize: 18,
@@ -65,7 +65,7 @@ class _CardsCertificatesState extends State<CardsCertificates> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   widget.certificateName,
                   style: const TextStyle(
                     fontSize: 20,
@@ -74,7 +74,7 @@ class _CardsCertificatesState extends State<CardsCertificates> {
                   ),
                 ),
                 const SizedBox(height: 5),
-                Text(
+                SelectableText(
                   widget.institution,
                   style: const TextStyle(
                     fontSize: 17,
@@ -82,7 +82,7 @@ class _CardsCertificatesState extends State<CardsCertificates> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   widget.period,
                   style: const TextStyle(
                     fontSize: 14,

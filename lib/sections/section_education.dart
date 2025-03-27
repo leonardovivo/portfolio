@@ -32,8 +32,8 @@ class SectionEducation extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      child: RichText(
-                        text: TextSpan(
+                      child: SelectableText.rich(
+                         TextSpan(
                           children: [
                             TextSpan(
                               text: 'FORMAÇÃO',

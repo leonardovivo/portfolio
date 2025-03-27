@@ -23,7 +23,7 @@ class SectionSkills extends StatelessWidget {
                   children: [
                     const BulletPoint(),
                     const SizedBox(width: 10),
-                    Text(
+                    SelectableText(
                       'Hard Skills',
                       style: TextStyle(
                         fontSize: isMobile ? 20 : 25,
@@ -91,7 +91,7 @@ class SectionSkills extends StatelessWidget {
                   children: [
                     const BulletPoint(),
                     const SizedBox(width: 10),
-                    Text(
+                    SelectableText(
                       'Soft Skills',
                       style: TextStyle(
                         fontSize: isMobile ? 20 : 25,
