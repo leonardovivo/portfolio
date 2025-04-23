@@ -78,6 +78,16 @@ class SectionIntro extends StatelessWidget {
                               .slide(begin: const Offset(0, 1)),
                           const SizedBox(width: 25),
                           SvgButton(
+                            assetPath: 'assets/icons/whatsapp.svg',
+                            url: Uri.parse(
+                                'https://wa.me/5511943858097?text=Olá!%20Vim%20pelo%20seu%20portfólio'),
+                            hoverColor: Colors.greenAccent,
+                          )
+                              .animate()
+                              .fadeIn(duration: 1.seconds)
+                              .slide(begin: const Offset(0, 1)),
+                          const SizedBox(width: 25),
+                          SvgButton(
                             assetPath: 'assets/icons/email.svg',
                             url: Uri.parse('mailto:leonardovivo3@gmail.com'),
                             hoverColor: Colors.red,

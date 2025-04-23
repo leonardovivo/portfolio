@@ -37,7 +37,7 @@ class SectionContact extends StatelessWidget {
                             child: SelectableText(
                               'Eu estou disponível para novas\n'
                               'oportunidades. Entre em contato\n'
-                              'por algum desses links.',
+                              'por algum desses links:',
                               style: TextStyle(
                                 fontFamily: "Cormorant Garamond",
                                 fontSize: 23,
@@ -197,7 +197,8 @@ class SectionContact extends StatelessWidget {
               const SizedBox(height: 11),
               LinkTextButton(
                 text: '+55 11 94385-8097',
-                url: Uri(scheme: 'tel', path: '+5511943858097'),
+                url: Uri.parse(
+                    'https://wa.me/5511943858097?text=Olá!%20Vim%20pelo%20seu%20portfólio'),
               ),
               const SizedBox(height: 14),
               LinkTextButton(
