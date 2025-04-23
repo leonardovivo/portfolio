@@ -79,6 +79,7 @@ flutter:
   - assets/icons/linkedin.svg
   - assets/icons/github.svg
   - assets/icons/email.svg
+  - assets/icons/whatsapp.svg
   - assets/videos/zeroByte.mp4
   - assets/videos/cryptoPulse.mp4
 
