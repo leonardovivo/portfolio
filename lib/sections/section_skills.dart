@@ -121,7 +121,7 @@ class SectionSkills extends StatelessWidget {
                       icon: Icons.message,
                       skillName: 'Comunicação',
                       description:
-                          'Habilidade em transmitir ideias e feedbacks.',
+                          'Habilidade em transmitir ideias e feedbacks',
                       height: isMobile ? 260 : 200,
                       width: isMobile ? 160 : 250,
                     ),
