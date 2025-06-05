@@ -17,8 +17,11 @@ class SectionSkills extends StatelessWidget {
             children: [
               const SizedBox(height: 250),
               Padding(
-                padding: EdgeInsets.only(left: isMobile ? 20 : 75),
+                padding: EdgeInsets.only(left: isMobile ? 0 : 75),
                 child: Row(
+                  mainAxisAlignment: isMobile
+                      ? MainAxisAlignment.center
+                      : MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const BulletPoint(),
@@ -26,7 +29,7 @@ class SectionSkills extends StatelessWidget {
                     SelectableText(
                       'Hard Skills',
                       style: TextStyle(
-                        fontSize: isMobile ? 20 : 25,
+                        fontSize: isMobile ? 30 : 25,
                         fontWeight: FontWeight.bold,
                         color: Colors.white.withOpacity(0.7),
                       ),
@@ -38,8 +41,8 @@ class SectionSkills extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: isMobile ? 17 : 75),
                 child: Wrap(
-                  spacing: isMobile ? 170 : 50,
-                  runSpacing: 20,
+                  spacing: isMobile ? 115 : 50,
+                  runSpacing: 30,
                   children: [
                     ZoomEducationItem(
                       icon: Icons.language,
@@ -47,7 +50,7 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Desenvolvimento de aplicações para dispositivos móveis',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 150 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.code,
@@ -55,7 +58,7 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Prática com a linguagem de programação do Flutter',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 150 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.build,
@@ -63,7 +66,7 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Gerenciamento de estado utilizando BLoC no Flutter',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 150 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.build,
@@ -71,22 +74,35 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Gerenciamento de estado utilizando Provider no Flutter',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 150 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
-                    ZoomEducationItem(
-                      icon: Icons.api,
-                      skillName: 'API Rest',
-                      description: 'Integração e consumo de APIs Rest',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 150 : 250,
-                    ),
+                    isMobile
+                        ? const Center(
+                            child: ZoomEducationItem(
+                              icon: Icons.api,
+                              skillName: 'API Rest',
+                              description: 'Integração e consumo de APIs Rest',
+                              height: 200,
+                              width: 350,
+                            ),
+                          )
+                        : const ZoomEducationItem(
+                            icon: Icons.api,
+                            skillName: 'API Rest',
+                            description: 'Integração e consumo de APIs Rest',
+                            height: 200,
+                            width: 250,
+                          ),
                   ],
                 ),
               ),
-              const SizedBox(height: 100),
+              const SizedBox(height: 150),
               Padding(
-                padding: EdgeInsets.only(left: isMobile ? 20 : 75),
+                padding: EdgeInsets.only(left: isMobile ? 0 : 75),
                 child: Row(
+                  mainAxisAlignment: isMobile
+                      ? MainAxisAlignment.center
+                      : MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const BulletPoint(),
@@ -94,7 +110,7 @@ class SectionSkills extends StatelessWidget {
                     SelectableText(
                       'Soft Skills',
                       style: TextStyle(
-                        fontSize: isMobile ? 20 : 25,
+                        fontSize: isMobile ? 30 : 25,
                         fontWeight: FontWeight.bold,
                         color: Colors.white.withOpacity(0.7),
                       ),
@@ -106,8 +122,8 @@ class SectionSkills extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: isMobile ? 17 : 75),
                 child: Wrap(
-                  spacing: isMobile ? 147 : 50,
-                  runSpacing: 20,
+                  spacing: isMobile ? 115 : 50,
+                  runSpacing: 30,
                   children: [
                     ZoomEducationItem(
                       icon: Icons.school,
@@ -115,7 +131,7 @@ class SectionSkills extends StatelessWidget {
                           '      Rápida',
                       description: 'Rapidez e facilidade no aprendizado',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 160 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.message,
@@ -123,7 +139,7 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Habilidade em transmitir ideias e feedbacks',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 160 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.group,
@@ -132,7 +148,7 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Colaboração eficaz com outros membros da equipe',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 160 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
                     ZoomEducationItem(
                       icon: Icons.accessibility,
@@ -140,16 +156,27 @@ class SectionSkills extends StatelessWidget {
                       description:
                           'Capacidade de se adaptar a novas situações e desafios',
                       height: isMobile ? 260 : 200,
-                      width: isMobile ? 160 : 250,
+                      width: isMobile ? 175 : 250,
                     ),
-                    ZoomEducationItem(
+                    isMobile
+                        ? const Center(
+                            child: ZoomEducationItem(
+                              icon: Icons.lightbulb,
+                              skillName: 'Criatividade',
+                              description: 'Capacidade de encontrar soluções inovadoras',
+                              height: 200,
+                              width: 350,
+                            ),
+                        )
+                    : const ZoomEducationItem(
                       icon: Icons.lightbulb,
                       skillName: 'Criatividade',
                       description:
                           'Capacidade de encontrar soluções inovadoras',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 160 : 250,
+                      height: 200,
+                      width: 250,
                     ),
+                        
                   ],
                 ),
               ),

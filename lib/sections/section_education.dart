@@ -15,12 +15,12 @@ class SectionEducation extends StatelessWidget {
           final bool isTablet = screenWidth >= 600 && screenWidth <= 1024;
           final bool isMediumScreen = screenWidth > 1024 && screenWidth <= 1300;
 
-          final double paddingHorizontal = isMobile ? 10 : 70;
+          final double paddingHorizontal = isMobile ? 60 : 70;
           final double fontSizeTitle = isMobile ? 60 : 100;
           final double cardWidth =
               isMobile || isTablet || isMediumScreen ? double.infinity : 535;
           final double cardHeight =
-              isMobile || isTablet || isMediumScreen ? 250 : 200;
+              isMobile || isTablet || isMediumScreen ? 230 : 200;
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +33,7 @@ class SectionEducation extends StatelessWidget {
                   children: [
                     Expanded(
                       child: SelectableText.rich(
-                         TextSpan(
+                        TextSpan(
                           children: [
                             TextSpan(
                               text: 'FORMAÇÃO',
