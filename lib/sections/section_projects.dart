@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/projects/bank_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/crypto_pulse.dart';
-import 'package:portfolio_leonardo_vivo/projects/login_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/sky_pulse.dart';
 import 'package:portfolio_leonardo_vivo/projects/zero_byte.dart';
 
