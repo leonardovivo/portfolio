@@ -60,8 +60,6 @@ class SectionProjects extends StatelessWidget {
             const SizedBox(height: 200),
             const CryptoPulseProject(),
             const SizedBox(height: 200),
-            const LoginScreenProject(),
-            const SizedBox(height: 200),
             const BankScreenProject(),
             const SizedBox(height: 20),
             const Divider(color: Colors.black),
