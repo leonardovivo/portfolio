@@ -3,6 +3,7 @@ import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/zoom_image.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class BankScreenProject extends StatelessWidget {
   const BankScreenProject({super.key});
@@ -40,17 +41,21 @@ class BankScreenProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile || isTablet) ...[
-                    SelectableText(
-                      'Esta é uma tela de banco estática que desenvolvi, contendo:'
-                      ' Um cartão com informações, números de renda e gastos,'
-                      ' seção de serviços rápidos (transferência e pausar cartão) e'
-                      ' também informações de transações.'
-                      '\n',
+                    AutoSizeText(
+                      'Esta é uma tela de banco\nque desenvolvi, contendo:\n\n'
+                      '• Um cartão com informações\n'
+                      '• Números de renda e gastos\n'
+                      '• Seção de serviços rápidos\n'
+                      '• Informações de transações recentes.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: fontSize,
                         color: Colors.white,
                       ),
+                      textAlign: TextAlign.justify,
+                      minFontSize: 17,
+                      maxFontSize: 17,
+                      maxLines: 12,
                     ),
                     const SizedBox(height: 20),
                     SelectableText(

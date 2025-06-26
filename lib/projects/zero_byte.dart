@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/video_widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class ZeroByteProject extends StatelessWidget {
   const ZeroByteProject({super.key});
@@ -25,26 +26,20 @@ class ZeroByteProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const SelectableText(
-                      'Zero Byte é uma loja virtual voltada para produtos de tecnologia.'
-                      ' O aplicativo permite que os usuários explorem uma ampla gama de produtos,'
-                      ' com detalhes como imagens, descrições e preços, todos obtidos de uma API.'
-                      ' Na Home, é possível visualizar esses itens e acessar informações detalhadas'
-                      ' sobre cada produto. O aplicativo possui uma tela de login e cadastro onde'
-                      ' os usuários podem criar uma conta ou fazer login usando suas credenciais.'
-                      ' O processo de autenticação é seguro e, caso o usuário esqueça a senha, ele'
-                      ' pode recuperá-la ao fornecer o e-mail registrado, recebendo instruções para'
-                      ' redefinir a senha. Para a experiência de compras, os usuários podem adicionar'
-                      ' itens ao carrinho, revisar os produtos selecionados e finalizar a compra.'
-                      ' Além disso, o carrinho é interativo, permitindo que o usuário adicione ou'
-                      ' remova produtos conforme necessário antes de concluir a transação. Esse'
-                      ' fluxo intuitivo facilita a navegação e torna a compra prática e eficiente.'
-                      '\n',
+                    const AutoSizeText(
+                      'Zero Byte é um app de e-commerce focado em tecnologia. '
+                      'Oferece login seguro, cadastro e recuperação de senha por e-mail. '
+                      'Na Home, os usuários podem explorar produtos com imagens, descrições e preços via API. '
+                      'É possível ver detalhes, adicionar itens ao carrinho, editar ou remover produtos '
+                      'e finalizar a compra de forma prática e intuitiva.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 18,
                         color: Colors.white,
                       ),
+                      maxLines: 12,
+                      minFontSize: 16,
+                      maxFontSize: 16,
+                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(
@@ -102,19 +97,12 @@ class ZeroByteProject extends StatelessWidget {
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
                   ] else if (isTablet) ...[
                     const SelectableText(
-                      'Zero Byte é uma loja virtual voltada para produtos de tecnologia.'
-                      ' O aplicativo permite que os usuários explorem uma ampla gama de produtos,'
-                      ' com detalhes como imagens, descrições e preços, todos obtidos de uma API.'
-                      ' Na Home, é possível visualizar esses itens e acessar informações detalhadas'
-                      ' sobre cada produto. O aplicativo possui uma tela de login e cadastro onde'
-                      ' os usuários podem criar uma conta ou fazer login usando suas credenciais.'
-                      ' O processo de autenticação é seguro e, caso o usuário esqueça a senha, ele'
-                      ' pode recuperá-la ao fornecer o e-mail registrado, recebendo instruções para'
-                      ' redefinir a senha. Para a experiência de compras, os usuários podem adicionar'
-                      ' itens ao carrinho, revisar os produtos selecionados e finalizar a compra.'
-                      ' Além disso, o carrinho é interativo, permitindo que o usuário adicione ou'
-                      ' remova produtos conforme necessário antes de concluir a transação. Esse'
-                      ' fluxo intuitivo facilita a navegação e torna a compra prática e eficiente.'
+                      'Zero Byte é um app de e-commerce focado em tecnologia.'
+                      ' Oferece login seguro, cadastro e recuperação de senha'
+                      ' por e-mail. Na Home, os usuários podem explorar produtos'
+                      ' com imagens, descrições e preços via API. É possível ver'
+                      ' detalhes, adicionar itens ao carrinho, editar ou remover'
+                      ' produtos e finalizar a compra de forma prática e intuitiva.'
                       '\n',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -177,7 +165,7 @@ class ZeroByteProject extends StatelessWidget {
                     const SizedBox(height: 20),
                     const VideoWidget(videoPath: 'assets/videos/zeroByte.mp4'),
                   ] else ...[
-                   const SelectableText.rich(
+                    const SelectableText.rich(
                       TextSpan(
                         style: TextStyle(
                           fontFamily: 'Poppins',
@@ -187,19 +175,12 @@ class ZeroByteProject extends StatelessWidget {
                         children: [
                           TextSpan(
                             text:
-                                'Zero Byte é uma loja virtual voltada para produtos de tecnologia.'
-                                ' O aplicativo permite que os usuários explorem uma ampla gama de produtos,'
-                                ' com detalhes como imagens, descrições e preços, todos obtidos de uma API.'
-                                ' Na Home, é possível visualizar esses itens e acessar informações detalhadas'
-                                ' sobre cada produto. O aplicativo possui uma tela de login e cadastro onde'
-                                ' os usuários podem criar uma conta ou fazer login usando suas credenciais.'
-                                ' O processo de autenticação é seguro e, caso o usuário esqueça a senha, ele'
-                                ' pode recuperá-la ao fornecer o e-mail registrado, recebendo instruções para'
-                                ' redefinir a senha. Para a experiência de compras, os usuários podem adicionar'
-                                ' itens ao carrinho, revisar os produtos selecionados e finalizar a compra.'
-                                ' Além disso, o carrinho é interativo, permitindo que o usuário adicione ou'
-                                ' remova produtos conforme necessário antes de concluir a transação. Esse'
-                                ' fluxo intuitivo facilita a navegação e torna a compra prática e eficiente.'
+                                'Zero Byte é um app de e-commerce focado em tecnologia.\n'
+                                'Oferece login seguro, cadastro e recuperação de senhan\n'
+                                'por e-mail. Na Home, os usuários podem explorar produtos\n'
+                                'com imagens, descrições e preços via API. É possível ver\n'
+                                'detalhes, adicionar itens ao carrinho, editar ou remover\n'
+                                'produtos e finalizar a compra de forma prática e intuitiva.\n'
                                 '\n'
                                 '\n',
                           ),
