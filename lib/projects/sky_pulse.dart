@@ -90,7 +90,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SelectableText(
-                      '• Consumi uma API Rest.',
+                      '• Consumo de API Rest.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
@@ -185,7 +185,7 @@ class SkyPulseProject extends StatelessWidget {
                       ),
                     ),
                     const SelectableText(
-                      '• Consumi uma API Rest.',
+                      '• Consumo de API Rest.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 20,
@@ -271,7 +271,7 @@ class SkyPulseProject extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.normal),
                           ),
                           TextSpan(
-                            text: 'consumi uma API Rest',
+                            text: 'consumo de API Rest',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           TextSpan(
