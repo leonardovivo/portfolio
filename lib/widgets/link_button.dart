@@ -28,7 +28,7 @@ class LinkButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         elevation: 5,
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 27),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 18),
       ).copyWith(
         backgroundColor: WidgetStateProperty.resolveWith<Color>(
           (Set<WidgetState> states) {
@@ -43,7 +43,7 @@ class LinkButton extends StatelessWidget {
         text,
         style: const TextStyle(
           fontFamily: 'Cormorant Garamond',
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       ),
