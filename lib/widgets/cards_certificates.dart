@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 
 class CardsCertificates extends StatefulWidget {
   final String typeCertificate;
   final String certificateName;
   final String institution;
   final String period;
+  final String? url;
   final double height;
   final double width;
+  final bool showButton;
 
   const CardsCertificates({
     required this.typeCertificate,
     required this.certificateName,
     required this.institution,
     required this.period,
+    this.url,
     required this.height,
     required this.width,
+    this.showButton = true,
     super.key,
   });
 
@@ -41,7 +46,8 @@ class _CardsCertificatesState extends State<CardsCertificates> {
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+              border:
+                  Border.all(color: Colors.white.withOpacity(0.3), width: 2),
               boxShadow: [
                 BoxShadow(
                   color: _isHovered
@@ -82,12 +88,25 @@ class _CardsCertificatesState extends State<CardsCertificates> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                SelectableText(
-                  widget.period,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.white70,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SelectableText(
+                      widget.period,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    
+                   if (widget.url != null && widget.showButton)
+                      LinkButton(
+                        text: 'Ver Certificado',
+                        url: Uri.parse(
+                          widget.url!,
+                        ),
+                      ),
+                  ],
                 ),
               ],
             ),
