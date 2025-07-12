@@ -26,7 +26,7 @@ class SectionAbout extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: paddingLeft),
+                padding: EdgeInsets.only(left: paddingLeft, top: isMobile ? 150 : 300),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: SelectableText.rich(

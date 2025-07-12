@@ -15,18 +15,19 @@ class SectionProjects extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 400),
             LayoutBuilder(
               builder: (context, constraints) {
                 final isMobile = constraints.maxWidth < 600;
+               
+                
 
                 return Padding(
-                  padding: EdgeInsets.only(left: isMobile ? 10 : 30),
+                  padding: EdgeInsets.only(left: isMobile ? 10 : 30, top: isMobile ? 200 : 350),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SelectableText.rich(
-                         TextSpan(
+                        TextSpan(
                           children: [
                             TextSpan(
                               text: 'PROJETOS',
