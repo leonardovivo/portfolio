@@ -134,7 +134,7 @@ class BankScreenProject extends StatelessWidget {
                         children: const [
                           TextSpan(
                             text:
-                                'Esta é uma tela de banco estática que desenvolvi, contendo:\n'
+                                'Esta é uma tela de banco contendo:\n'
                                 'Um cartão com informações, números de renda e gastos,\n'
                                 'seção de serviços rápidos (transferência e pausar cartão) e\n'
                                 'também informações de transações.\n'
