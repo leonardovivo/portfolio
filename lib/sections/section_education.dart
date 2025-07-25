@@ -84,7 +84,7 @@ class SectionEducation extends StatelessWidget {
                             child: CardsCertificates(
                               typeCertificate: 'Formação Dart',
                               certificateName:
-                                  'Crie projetos em Dart, a linguagem utilizada no Flutter',
+                                  'Crie projetos em Dart',
                               institution: 'Alura',
                               period: '55h - 2023',
                               height: cardHeight,
@@ -97,7 +97,7 @@ class SectionEducation extends StatelessWidget {
                             child: CardsCertificates(
                               typeCertificate: 'Tecnólogo',
                               certificateName:
-                                  'Análise e Desenvolvimento de Sistemas',
+                                  'ADS',
                               institution:
                                   'FATEC Ipiranga - Pastor Enéas Tognini',
                               period: '2023 - 2025',
