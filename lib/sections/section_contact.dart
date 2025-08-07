@@ -59,7 +59,7 @@ class SectionContact extends StatelessWidget {
                         child: isMobile
                             ? const SizedBox.shrink()
                             : SelectableText(
-                                '2024 - Code by Leonardo Vivo Guerreiro',
+                                '2024 - Code by Leonardo Vivo Guerreiro with Flutter',
                                 style: TextStyle(
                                   fontFamily: "Cormorant Garamond",
                                   fontSize: 18,
