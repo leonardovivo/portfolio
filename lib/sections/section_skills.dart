@@ -39,61 +39,120 @@ class SectionSkills extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.only(left: isMobile ? 17 : 75),
-                child: Wrap(
-                  spacing: isMobile ? 115 : 50,
-                  runSpacing: 30,
-                  children: [
-                    ZoomEducationItem(
-                      icon: Icons.language,
-                      skillName: 'Flutter',
-                      description:
-                          'Desenvolvimento de aplicações para dispositivos móveis',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.code,
-                      skillName: 'Dart',
-                      description:
-                          'Prática com a linguagem de programação do Flutter',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.build,
-                      skillName: 'BLoC',
-                      description:
-                          'Gerenciamento de estado utilizando BLoC no Flutter',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.build,
-                      skillName: 'Provider',
-                      description:
-                          'Gerenciamento de estado utilizando Provider no Flutter',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    isMobile
-                        ? const Center(
-                            child: ZoomEducationItem(
+                padding: EdgeInsets.only(left: isMobile ? 17 : 40),
+                child: Padding(
+                  padding: EdgeInsets.only(left: isMobile ? 0 : 45),
+                  child: isMobile
+                      ? const Center(
+                          child: Wrap(
+                            alignment: WrapAlignment.center,
+                            spacing: 20,
+                            runSpacing: 30,
+                            children: [
+                              ZoomEducationItem(
+                                icon: Icons.language,
+                                skillName: 'Flutter',
+                                description:
+                                    'Desenvolvimento de aplicações para dispositivos móveis',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.code,
+                                skillName: 'Dart',
+                                description:
+                                    'Prática com a linguagem de programação do Flutter',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.build,
+                                skillName: 'BLoC',
+                                description:
+                                    'Gerenciamento de estado utilizando BLoC no Flutter',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.build,
+                                skillName: 'Provider',
+                                description:
+                                    'Gerenciamento de estado utilizando Provider no Flutter',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.api,
+                                skillName: 'API Rest',
+                                description:
+                                    'Integração e consumo de APIs Rest',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.check,
+                                skillName: 'Testes',
+                                description:
+                                    'Realização de Testes Unitários e de Widgets',
+                                height: 220,
+                                width: 185,
+                              ),
+                            ],
+                          ),
+                        )
+                      : const Wrap(
+                          spacing: 50,
+                          runSpacing: 30,
+                          children: [
+                            ZoomEducationItem(
+                              icon: Icons.language,
+                              skillName: 'Flutter',
+                              description:
+                                  'Desenvolvimento de aplicações para dispositivos móveis',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.code,
+                              skillName: 'Dart',
+                              description:
+                                  'Prática com a linguagem de programação do Flutter',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.build,
+                              skillName: 'BLoC',
+                              description:
+                                  'Gerenciamento de estado utilizando BLoC no Flutter',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.build,
+                              skillName: 'Provider',
+                              description:
+                                  'Gerenciamento de estado utilizando Provider no Flutter',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
                               icon: Icons.api,
                               skillName: 'API Rest',
                               description: 'Integração e consumo de APIs Rest',
                               height: 200,
-                              width: 350,
+                              width: 250,
                             ),
-                          )
-                        : const ZoomEducationItem(
-                            icon: Icons.api,
-                            skillName: 'API Rest',
-                            description: 'Integração e consumo de APIs Rest',
-                            height: 200,
-                            width: 250,
-                          ),
-                  ],
+                            ZoomEducationItem(
+                              icon: Icons.check,
+                              skillName: 'Testes',
+                              description:
+                                  'Realização de Testes Unitários e de Widgets',
+                              height: 200,
+                              width: 250,
+                            ),
+                          ],
+                        ),
                 ),
               ),
               const SizedBox(height: 150),
@@ -120,64 +179,121 @@ class SectionSkills extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.only(left: isMobile ? 17 : 75),
-                child: Wrap(
-                  spacing: isMobile ? 115 : 50,
-                  runSpacing: 30,
-                  children: [
-                    ZoomEducationItem(
-                      icon: Icons.school,
-                      skillName: 'Aprendizagem\n'
-                          '      Rápida',
-                      description: 'Rapidez e facilidade no aprendizado',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.message,
-                      skillName: 'Comunicação',
-                      description:
-                          'Habilidade em transmitir ideias e feedbacks',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.group,
-                      skillName: 'Trabalho em\n'
-                          '     equipe',
-                      description:
-                          'Colaboração eficaz com outros membros da equipe',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    ZoomEducationItem(
-                      icon: Icons.accessibility,
-                      skillName: 'Adaptabilidade',
-                      description:
-                          'Capacidade de se adaptar a novas situações e desafios',
-                      height: isMobile ? 260 : 200,
-                      width: isMobile ? 175 : 250,
-                    ),
-                    isMobile
-                        ? const Center(
-                            child: ZoomEducationItem(
+                padding: EdgeInsets.only(left: isMobile ? 17 : 40),
+                child: Padding(
+                  padding: EdgeInsets.only(left: isMobile ? 0 : 45),
+                  child: isMobile
+                      ? const Center(
+                          child: Wrap(
+                            alignment: WrapAlignment.center,
+                            spacing: 20,
+                            runSpacing: 30,
+                            children: [
+                              ZoomEducationItem(
+                                icon: Icons.school,
+                                skillName: 'Aprendizagem\nRápida',
+                                description:
+                                    'Rapidez e facilidade no aprendizado',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.message,
+                                skillName: 'Comunicação',
+                                description:
+                                    'Habilidade em transmitir ideias e feedbacks',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.group,
+                                skillName: 'Trabalho em\nEquipe',
+                                description:
+                                    'Colaboração eficaz com outros membros da equipe',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.accessibility,
+                                skillName: 'Adaptabilidade',
+                                description:
+                                    'Capacidade de se adaptar a novas situações e desafios',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.lightbulb,
+                                skillName: 'Criatividade',
+                                description:
+                                    'Capacidade de encontrar soluções inovadoras',
+                                height: 220,
+                                width: 185,
+                              ),
+                              ZoomEducationItem(
+                                icon: Icons.search,
+                                skillName: 'Resolução de problemas',
+                                description:
+                                    'Análise crítica com capacidade de resolver problemas',
+                                height: 220,
+                                width: 185,
+                              ),
+                            ],
+                          ),
+                        )
+                      : const Wrap(
+                          spacing: 50,
+                          runSpacing: 30,
+                          children: [
+                            ZoomEducationItem(
+                              icon: Icons.school,
+                              skillName: 'Aprendizagem\n      Rápida',
+                              description:
+                                  'Rapidez e facilidade no aprendizado',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.message,
+                              skillName: 'Comunicação',
+                              description:
+                                  'Habilidade em transmitir ideias e feedbacks',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.group,
+                              skillName: 'Trabalho em\n     equipe',
+                              description:
+                                  'Colaboração eficaz com outros membros da equipe',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
+                              icon: Icons.accessibility,
+                              skillName: 'Adaptabilidade',
+                              description:
+                                  'Capacidade de se adaptar a novas situações e desafios',
+                              height: 200,
+                              width: 250,
+                            ),
+                            ZoomEducationItem(
                               icon: Icons.lightbulb,
                               skillName: 'Criatividade',
-                              description: 'Capacidade de encontrar soluções inovadoras',
+                              description:
+                                  'Capacidade de encontrar soluções inovadoras',
                               height: 200,
-                              width: 350,
+                              width: 250,
                             ),
-                        )
-                    : const ZoomEducationItem(
-                      icon: Icons.lightbulb,
-                      skillName: 'Criatividade',
-                      description:
-                          'Capacidade de encontrar soluções inovadoras',
-                      height: 200,
-                      width: 250,
-                    ),
-                        
-                  ],
+                            ZoomEducationItem(
+                              icon: Icons.search,
+                              skillName: 'Resolução de problemas',
+                              description:
+                                  'Análise crítica com capacidade de resolver problemas',
+                              height: 200,
+                              width: 250,
+                            ),
+                          ],
+                        ),
                 ),
               ),
             ],
