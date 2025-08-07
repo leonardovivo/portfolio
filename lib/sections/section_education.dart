@@ -25,7 +25,7 @@ class SectionEducation extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 300),
               Padding(
                 padding: EdgeInsets.only(left: isMobile ? 20 : 50),
                 child: Row(
