@@ -5,7 +5,7 @@ class CardsCertificates extends StatefulWidget {
   final String certificateName;
   final String institution;
   final String period;
-  final double height;
+  final double? height;
   final double width;
 
   const CardsCertificates({
@@ -13,7 +13,7 @@ class CardsCertificates extends StatefulWidget {
     required this.certificateName,
     required this.institution,
     required this.period,
-    required this.height,
+    this.height,
     required this.width,
     super.key,
   });
@@ -41,7 +41,8 @@ class _CardsCertificatesState extends State<CardsCertificates> {
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+              border:
+                  Border.all(color: Colors.white.withOpacity(0.3), width: 2),
               boxShadow: [
                 BoxShadow(
                   color: _isHovered
@@ -53,7 +54,8 @@ class _CardsCertificatesState extends State<CardsCertificates> {
               ],
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize:
+                  widget.height == null ? MainAxisSize.min : MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SelectableText(

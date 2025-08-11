@@ -19,8 +19,8 @@ class SectionEducation extends StatelessWidget {
           final double fontSizeTitle = isMobile ? 60 : 100;
           final double cardWidth =
               isMobile || isTablet || isMediumScreen ? double.infinity : 535;
-          final double cardHeight =
-              isMobile || isTablet || isMediumScreen ? 230 : 200;
+          final double? cardHeight =
+              isMobile ? null : (isTablet || isMediumScreen ? 230 : 200);
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,8 +73,8 @@ class SectionEducation extends StatelessWidget {
                               institution:
                                   'FATEC Ipiranga - Pastor Enéas Tognini',
                               period: '2023 - 2025',
-                              height: cardHeight,
                               width: cardWidth,
+                              height: cardHeight,
                             ),
                           ),
                           const SizedBox(height: 40),
@@ -86,8 +86,8 @@ class SectionEducation extends StatelessWidget {
                                   'Desenvolva seu primeiro app com Flutter',
                               institution: 'Alura',
                               period: '96h - 2023',
-                              height: cardHeight,
                               width: cardWidth,
+                              height: cardHeight,
                             ),
                           ),
                           const SizedBox(height: 40),
@@ -99,8 +99,8 @@ class SectionEducation extends StatelessWidget {
                                   'Crie projetos em Dart, a linguagem utilizada no Flutter',
                               institution: 'Alura',
                               period: '55h - 2023',
-                              height: cardHeight,
                               width: cardWidth,
+                              height: cardHeight,
                             ),
                           ),
                         ],
@@ -117,8 +117,8 @@ class SectionEducation extends StatelessWidget {
                                   institution:
                                       'FATEC Ipiranga - Pastor Enéas Tognini',
                                   period: '2023 - 2025',
-                                  height: cardHeight,
                                   width: cardWidth,
+                                  height: cardHeight,
                                 ),
                               ),
                               const SizedBox(height: 40),
@@ -130,8 +130,8 @@ class SectionEducation extends StatelessWidget {
                                       'Desenvolva seu primeiro app com Flutter',
                                   institution: 'Alura',
                                   period: '96h - 2023',
-                                  height: cardHeight,
                                   width: cardWidth,
+                                  height: cardHeight,
                                 ),
                               ),
                               const SizedBox(height: 40),
@@ -143,8 +143,8 @@ class SectionEducation extends StatelessWidget {
                                       'Crie projetos em Dart, a linguagem utilizada no Flutter',
                                   institution: 'Alura',
                                   period: '55h - 2023',
-                                  height: cardHeight,
                                   width: cardWidth,
+                                  height: cardHeight,
                                 ),
                               ),
                             ],
