@@ -176,7 +176,7 @@ class ZeroByteProject extends StatelessWidget {
                           TextSpan(
                             text:
                                 'Zero Byte é um app de e-commerce focado em tecnologia.\n'
-                                'Oferece login seguro, cadastro e recuperação de senhan\n'
+                                'Oferece login seguro, cadastro e recuperação de senha\n'
                                 'por e-mail. Na Home, os usuários podem explorar produtos\n'
                                 'com imagens, descrições e preços via API. É possível ver\n'
                                 'detalhes, adicionar itens ao carrinho, editar ou remover\n'
