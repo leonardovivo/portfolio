@@ -142,7 +142,7 @@ class ZeroByteProject extends StatelessWidget {
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 18,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -151,7 +151,7 @@ class ZeroByteProject extends StatelessWidget {
                       '• Provider',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 18,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),

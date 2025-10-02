@@ -149,7 +149,7 @@ class SkyPulseProject extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(
-                      'Neste projeto usei:',
+                      'Neste aplicativo usei:',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 20,
