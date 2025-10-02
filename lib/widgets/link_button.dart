@@ -35,7 +35,7 @@ class LinkButton extends StatelessWidget {
             if (states.contains(WidgetState.hovered)) {
               return Colors.grey;
             }
-            return const Color.fromARGB(255, 48, 47, 47);
+            return const Color.fromARGB(255, 145, 0, 255);
           },
         ),
       ),
@@ -43,7 +43,7 @@ class LinkButton extends StatelessWidget {
         text,
         style: const TextStyle(
           fontFamily: 'Cormorant Garamond',
-          fontSize: 18,
+          fontSize: 22,
           fontWeight: FontWeight.bold,
         ),
       ),
