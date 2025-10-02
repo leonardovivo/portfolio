@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/projects/bank_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/crypto_pulse.dart';
+import 'package:portfolio_leonardo_vivo/projects/skill_playground.dart';
 import 'package:portfolio_leonardo_vivo/projects/sky_pulse.dart';
 import 'package:portfolio_leonardo_vivo/projects/zero_byte.dart';
 
@@ -18,11 +19,10 @@ class SectionProjects extends StatelessWidget {
             LayoutBuilder(
               builder: (context, constraints) {
                 final isMobile = constraints.maxWidth < 600;
-               
-                
 
                 return Padding(
-                  padding: EdgeInsets.only(left: isMobile ? 10 : 30, top: isMobile ? 200 : 350),
+                  padding: EdgeInsets.only(
+                      left: isMobile ? 10 : 30, top: isMobile ? 200 : 350),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -55,6 +55,8 @@ class SectionProjects extends StatelessWidget {
             ),
             const SizedBox(height: 100),
             const SkyPulseProject(),
+            const SizedBox(height: 200),
+            const SkillPlaygroundProject(),
             const SizedBox(height: 200),
             const ZeroByteProject(),
             const SizedBox(height: 200),
