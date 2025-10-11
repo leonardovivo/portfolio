@@ -88,6 +88,15 @@ class SectionSkills extends StatelessWidget {
                               height: 190,
                               width: 280,
                             ),
+                             SizedBox(height: 30),
+                            ZoomEducationItem(
+                              icon: Icons.check_circle,
+                              skillName: 'Testes',
+                              description:
+                                  'Criação de Testes Unitários e de Widgets',
+                              height: 190,
+                              width: 280,
+                            ),
                           ],
                         ),
                     )
@@ -135,6 +144,14 @@ class SectionSkills extends StatelessWidget {
                             height: 200,
                             width: 250,
                           ),
+                          ZoomEducationItem(
+                              icon: Icons.check_circle,
+                              skillName: 'Testes',
+                              description:
+                                  'Criação de Testes Unitários e de Widgets',
+                              height: 200,
+                              width: 250,
+                            ),
                         ],
                       ),
               ),
@@ -210,6 +227,15 @@ class SectionSkills extends StatelessWidget {
                               height: 190,
                               width: 280,
                             ),
+                            SizedBox(height: 30),
+                            ZoomEducationItem(
+                              icon: Icons.search,
+                              skillName: 'Resolução de Problemas',
+                              description:
+                                  'Capacidade analítica para identificar e resolver problemas',
+                              height: 190,
+                              width: 280,
+                            ),
                           ],
                         ),
                     )
@@ -256,6 +282,14 @@ class SectionSkills extends StatelessWidget {
                             height: 200,
                             width: 250,
                           ),
+                           ZoomEducationItem(
+                              icon: Icons.search,
+                              skillName: 'Resolução de Problemas',
+                              description:
+                                  'Capacidade analítica para identificar e resolver problemas',
+                              height: 200,
+                              width: 250,
+                            ),
                         ],
                       ),
               ),
