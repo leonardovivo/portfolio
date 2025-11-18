@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ZoomEducationItem extends StatefulWidget {
-  final IconData icon;
+  final Widget icon;
   final String skillName;
   final String description;
   final double height;
@@ -41,7 +41,8 @@ class _ZoomableEducationItemState extends State<ZoomEducationItem> {
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+              border:
+                  Border.all(color: Colors.white.withOpacity(0.3), width: 2),
               boxShadow: [
                 BoxShadow(
                   color: _isHovered
@@ -55,7 +56,7 @@ class _ZoomableEducationItemState extends State<ZoomEducationItem> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(widget.icon, size: 40, color: Colors.white),
+                widget.icon,
                 const SizedBox(height: 10),
                 SelectableText(
                   widget.skillName,
