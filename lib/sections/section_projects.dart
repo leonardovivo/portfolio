@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/projects/bank_screen.dart';
 import 'package:portfolio_leonardo_vivo/projects/crypto_pulse.dart';
+import 'package:portfolio_leonardo_vivo/projects/meal4you.dart';
 import 'package:portfolio_leonardo_vivo/projects/skill_playground.dart';
 import 'package:portfolio_leonardo_vivo/projects/sky_pulse.dart';
 import 'package:portfolio_leonardo_vivo/projects/zero_byte.dart';
@@ -34,6 +35,7 @@ class SectionProjects extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: isMobile ? 60 : 100,
                                 fontWeight: FontWeight.bold,
+                                // ignore: deprecated_member_use
                                 color: Colors.white.withOpacity(0.1),
                               ),
                             ),
@@ -54,6 +56,8 @@ class SectionProjects extends StatelessWidget {
               },
             ),
             const SizedBox(height: 100),
+            const Meal4YouProject(),
+            const SizedBox(height: 200),
             const SkyPulseProject(),
             const SizedBox(height: 200),
             const SkillPlaygroundProject(),
