@@ -3,7 +3,6 @@ import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/zoom_image.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class BankScreenProject extends StatelessWidget {
   const BankScreenProject({super.key});
@@ -41,7 +40,7 @@ class BankScreenProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile || isTablet) ...[
-                    AutoSizeText(
+                    SelectableText(
                       'Esta é uma tela de banco\nque desenvolvi, contendo:\n\n'
                       '• Um cartão com informações\n'
                       '• Números de renda e gastos\n'
@@ -51,11 +50,8 @@ class BankScreenProject extends StatelessWidget {
                         fontFamily: 'Poppins',
                         fontSize: fontSize,
                         color: Colors.white,
+                        height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
-                      minFontSize: fontSize,
-                      maxFontSize: fontSize,
-                      maxLines: 12,
                     ),
                     const SizedBox(height: 20),
                     SelectableText(
@@ -133,8 +129,7 @@ class BankScreenProject extends StatelessWidget {
                         ),
                         children: const [
                           TextSpan(
-                            text:
-                                'Esta é uma tela de banco contendo:\n'
+                            text: 'Esta é uma tela de banco contendo:\n'
                                 'Um cartão com informações, números de renda e gastos,\n'
                                 'seção de serviços rápidos (transferência e pausar cartão) e\n'
                                 'também informações de transações.\n'

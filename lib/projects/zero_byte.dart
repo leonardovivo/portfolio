@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/video_widget.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class ZeroByteProject extends StatelessWidget {
   const ZeroByteProject({super.key});
@@ -26,7 +25,7 @@ class ZeroByteProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const AutoSizeText(
+                    const SelectableText(
                       'Zero Byte é um app de e-commerce focado em tecnologia. '
                       'Oferece login seguro, cadastro e recuperação de senha por e-mail. '
                       'Na Home, os usuários podem explorar produtos com imagens, descrições e preços via API. '
@@ -34,12 +33,10 @@ class ZeroByteProject extends StatelessWidget {
                       'e finalizar a compra de forma prática e intuitiva.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        fontSize: 16,
                         color: Colors.white,
+                        height: 1.5,
                       ),
-                      maxLines: 12,
-                      minFontSize: 16,
-                      maxFontSize: 16,
-                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(

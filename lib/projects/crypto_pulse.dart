@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/video_widget.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class CryptoPulseProject extends StatelessWidget {
   const CryptoPulseProject({super.key});
@@ -26,18 +25,16 @@ class CryptoPulseProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const AutoSizeText(
+                    const SelectableText(
                       'Crypto Pulse é um app que exibe dados sobre 9 das criptomoedas mais populares, '
                       'consumindo informações de uma API Rest. No vídeo a seguir, duas delas são usadas '
                       'como exemplo para manter a demonstração objetiva, mas o comportamento é o mesmo para todas.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        fontSize: 16,
                         color: Colors.white,
+                        height: 1.5,
                       ),
-                      maxLines: 10,
-                      minFontSize: 16,
-                      maxFontSize: 16,
-                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(
@@ -129,7 +126,7 @@ class CryptoPulseProject extends StatelessWidget {
                       '• Consumo de API Rest',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 18,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),

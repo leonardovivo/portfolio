@@ -3,7 +3,6 @@ import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/screens/fullscreen_image.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/zoom_image.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class SkyPulseProject extends StatelessWidget {
   const SkyPulseProject({super.key});
@@ -36,21 +35,19 @@ class SkyPulseProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const AutoSizeText(
+                    const SelectableText(
                       'O Sky Pulse é um aplicativo que passa ao usuário informações climáticas da cidade que ele inserir. '
                       'Ele cobre inúmeras cidades ao redor do mundo. '
                       'Contém a sua tela inicial com o campo de texto onde o usuário colocará a cidade escolhida. '
                       'Em seguida, a tela exibe as informações climáticas da cidade buscada. '
-                      'Pensando em uma forma agradável de informar um erro ao usuário, o Sky Pulse também conta com'
+                      'Pensando em uma forma agradável de informar um erro ao usuário, o Sky Pulse também conta com '
                       'uma tela de erro, explicando claramente os dois possíveis problemas que podem ter ocorrido.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        fontSize: 16,
                         color: Colors.white,
+                        height: 1.5,
                       ),
-                      textAlign: TextAlign.justify,
-                      minFontSize: 16,
-                      maxFontSize: 16,
-                      maxLines: 15,
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(

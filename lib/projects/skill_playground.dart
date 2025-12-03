@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leonardo_vivo/controller/animated_controller.dart';
 import 'package:portfolio_leonardo_vivo/widgets/link_button.dart';
 import 'package:portfolio_leonardo_vivo/widgets/video_widget.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class SkillPlaygroundProject extends StatelessWidget {
   const SkillPlaygroundProject({super.key});
@@ -26,19 +25,17 @@ class SkillPlaygroundProject extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (isMobile) ...[
-                    const AutoSizeText(
-                      'Skill Playground é um aplicativo desenvolvido para demonstrar, de forma prática e modular,'
-                      'o domínio de recursos importantes do ecossistema Flutter. Cada funcionalidade - como'
-                      'navegação, bloc, animações, performance, comunicação com código nativo, entre outras -'
+                    const SelectableText(
+                      'Skill Playground é um aplicativo desenvolvido para demonstrar, de forma prática e modular, '
+                      'o domínio de recursos importantes do ecossistema Flutter. Cada funcionalidade - como '
+                      'navegação, bloc, animações, performance, comunicação com código nativo, entre outras - '
                       'está organizada em uma tela própria, acessada por meio de cards interativos.',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        fontSize: 16,
                         color: Colors.white,
+                        height: 1.5,
                       ),
-                      maxLines: 12,
-                      minFontSize: 16,
-                      maxFontSize: 16,
-                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(height: 20),
                     const SelectableText(
@@ -178,9 +175,9 @@ class SkillPlaygroundProject extends StatelessWidget {
                         videoPath: 'assets/videos/skillPlayground.mp4'),
                   ] else if (isTablet) ...[
                     const SelectableText(
-                      'Skill Playground é um aplicativo desenvolvido para demonstrar, de forma prática e modular,'
-                      'o domínio de recursos importantes do ecossistema Flutter. Cada funcionalidade - como'
-                      'navegação, bloc, animações, performance, comunicação com código nativo, entre outras -'
+                      'Skill Playground é um aplicativo desenvolvido para demonstrar, de forma prática e modular, '
+                      'o domínio de recursos importantes do ecossistema Flutter. Cada funcionalidade - como '
+                      'navegação, bloc, animações, performance, comunicação com código nativo, entre outras - '
                       'está organizada em uma tela própria, acessada por meio de cards interativos.'
                       '\n',
                       style: TextStyle(
