@@ -177,7 +177,7 @@ class SkillPlaygroundProject extends StatelessWidget {
                     const SelectableText(
                       'Skill Playground é um aplicativo desenvolvido para demonstrar, de forma prática e modular, '
                       'o domínio de recursos importantes do ecossistema Flutter. Cada funcionalidade - como '
-                      'navegação, bloc, animações, performance, comunicação com código nativo, entre outras - '
+                      ' navegação, bloc, animações, performance, comunicação com código nativo, entre outras - '
                       'está organizada em uma tela própria, acessada por meio de cards interativos.'
                       '\n',
                       style: TextStyle(
