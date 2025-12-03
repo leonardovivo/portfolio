@@ -3,9 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "ba14f858d88a31b55ea8d9fd05eca2b6",
-"assets/AssetManifest.bin.json": "e9ca63b8526c45b0e4d2ffb4ce89f82f",
-"assets/AssetManifest.json": "d4d24f8b39b45d66abddb207d6a14efe",
+const RESOURCES = {"assets/AssetManifest.bin": "ae8989d841a383d7cbea0f3419e430cd",
+"assets/AssetManifest.bin.json": "12f2bfab493f64b98ab50b4a1c21c531",
 "assets/assets/fonts/CormorantGaramond-Light.ttf": "23e4d6b7457958d1023e5f26b3f3d5d2",
 "assets/assets/fonts/DancingScript-Bold.ttf": "6c5b41b0622681bb6aafb3d4ed2a1171",
 "assets/assets/fonts/Poppins-Regular.ttf": "093ee89be9ede30383f39a899c485a82",
@@ -25,6 +24,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "ba14f858d88a31b55ea8d9fd05eca2b6
 "assets/assets/images/telaPrincipal.png": "28dfd8dac8781f11919b87dfc7c6138a",
 "assets/assets/images/telaRegistro.png": "65ca56d6ceb65f81f4cc5292ceb365a9",
 "assets/assets/videos/cryptoPulse.mp4": "fbc4eb516e1ebb7da80f1be429d5dad8",
+"assets/assets/videos/meal4You.mp4": "bcbb50dd8547678910ae2971f10afcac",
 "assets/assets/videos/skillPlayground.mp4": "94a48e2e0b4de95faf9686de79ec7a33",
 "assets/assets/videos/zeroByte.mp4": "87425f566ef86ec75a2b44e35df1a30e",
 "assets/FontManifest.json": "48fee45d1a9b22ad25f44cd72ff78efe",
@@ -54,14 +54,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "ba14f858d88a31b55ea8d9fd05eca2b6
 "canvaskit/skwasm_st.wasm": "56c3973560dfcbf28ce47cebe40f3206",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
-"flutter_bootstrap.js": "24d7fa1f8db12cb07b4dbf43ed0b2730",
+"flutter_bootstrap.js": "f2dd5470959661997f4438854a7852e9",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "b76b5066637a79f10f8089a99d975793",
 "/": "b76b5066637a79f10f8089a99d975793",
-"main.dart.js": "2831cf093f98e592ec0fa6bc0ad478ac",
+"main.dart.js": "b18394411480777402a6b65b073e9275",
 "manifest.json": "461fee63e040f0b27725794aa59b4981",
 "version.json": "dc864db008260d5ddcc6f7705ea3373a"};
 // The application shell files that are downloaded before a service worker can
